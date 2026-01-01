@@ -1,0 +1,2649 @@
+/**
+ * Dara International Group - Elegant Custom Styles
+ * ================================================
+ * Color Palette:
+ * - #ddd8cc - Warm cream (elegant backgrounds, cards)
+ * - #4b70a9 - Sophisticated blue (primary brand color)
+ * - #90abd4 - Soft blue (secondary/hover states)
+ * - #231f20 - Deep charcoal (text, dark sections)
+ * 
+ * Font: IBM Plex Sans Arabic
+ * 
+ * Design Philosophy: Clean, sophisticated, minimal
+ */
+
+/* Import IBM Plex Sans Arabic with all weights */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+
+/* ============================================
+   CSS Variables - Dara Brand Colors
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --dara-primary: #4b70a9;
+  --dara-primary-dark: #3d5c8a;
+  --dara-primary-light: #6889bc;
+  --dara-secondary: #90abd4;
+  --dara-cream: #ddd8cc;
+  --dara-cream-dark: #c9c4b8;
+  --dara-dark: #231f20;
+  --dara-dark-light: #3a3536;
+  --dara-white: #ffffff;
+  --dara-off-white: #f8f7f5;
+
+  /* Text Colors */
+  --dara-text-light: rgba(255, 255, 255, 0.9);
+  --dara-text-muted: rgba(255, 255, 255, 0.7);
+  --dara-text-dark: #231f20;
+  --dara-text-dark-muted: rgba(35, 31, 32, 0.7);
+
+  /* Shadows - Elegant soft shadows */
+  --dara-shadow-sm: 0 2px 8px rgba(35, 31, 32, 0.08);
+  --dara-shadow-md: 0 4px 20px rgba(35, 31, 32, 0.1);
+  --dara-shadow-lg: 0 8px 40px rgba(35, 31, 32, 0.12);
+  --dara-shadow-primary: 0 4px 20px rgba(75, 112, 169, 0.3);
+
+  /* Transitions */
+  --dara-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --dara-transition-fast: all 0.2s ease;
+
+  /* Border Radius - Refined, not too rounded */
+  --dara-radius-sm: 4px;
+  --dara-radius-md: 8px;
+  --dara-radius-lg: 12px;
+}
+
+/* ============================================
+   Global Typography & Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  background-color: var(--dara-dark) !important;
+  color: var(--dara-text-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.te-slider-title,
+.te-section-title .title,
+.te-footer-widget-title,
+.te-testimonial-card .name,
+.te-post-card .title,
+.te-info-card .title,
+.te-icon-card .title,
+.page-title,
+.te-main-menu ul li a {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p,
+span,
+a,
+li,
+input,
+textarea,
+button {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+}
+
+/* Elegant selection */
+::selection {
+  background-color: var(--dara-primary);
+  color: var(--dara-white);
+}
+
+/* ============================================
+   Override ALL Orange (#4b70a9) Colors
+   ============================================ */
+
+/* Primary orange to Dara Blue - Color */
+.text-primary,
+.te-header-left a:hover,
+.te-header-icon-box .icon i,
+.te-slider-short-title,
+.te-section-title .short-title,
+.te-section-title .title span,
+.te-info-card .read-btn a,
+.te-icon-card.style-2 .title,
+.te-testimonial-card .quote-icon .icon i,
+.te-testimonial-card .rating i,
+.te-post-card .read-btn,
+.te-post-meta-info .te-single-meta .icon,
+.breadcrumb-list ul li.active a,
+.te-list-item .icon i,
+.progress-wrap svg.progress-circle path,
+.te-footer-widget-contact span i,
+.te-latest-post-meta i,
+.te-sidebar-widget .te-widget-post-meta i,
+.te-blog-details-content blockquote::before,
+.te-comment-author-info .reply-btn,
+.te-portfolio-filter-nav button.active,
+.te-portfolio-filter-nav button:hover,
+.te-accordion .accordion-button:not(.collapsed),
+.te-accordion .accordion-button:not(.collapsed)::after,
+.te-faq-accordion .accordion-button:not(.collapsed),
+.te-pricing-card .te-pricing-feature li i,
+.te-service-details-sidebar .te-widget-list li a:hover,
+.te-service-details-sidebar .te-widget-list li a:hover i,
+.te-project-details-info .te-project-info-item .icon i,
+.te-team-details-info .te-social-profile a:hover,
+.te-team-details-content .te-section-title .title span,
+.te-error-content .error-code,
+.te-search-result .te-post-card .content .read-btn {
+  color: var(--dara-primary) !important;
+}
+
+/* Primary orange to Dara Blue - Background */
+.background-primary,
+.te-theme-btn,
+.te-theme-btn.style-2,
+.te-theme-btn.style-3,
+.btn-primary,
+.te-call-btn .icon,
+.te-icon-card .icon,
+.te-icon-card.style-2 .icon,
+.te-icon-card.style-3 .te-icon,
+.te-info-card.style-2:hover,
+.te-post-card.style-1 .te-post-date,
+.te-company-foundation-wrapper,
+.cta-card.style-1 .cta-content-wrapper,
+.video-card .video-play,
+.video-slider-card .play-btn a,
+.appointment-area.style-1,
+.te-team-card.style-2 .te-content-wrapper,
+.te-social-profile a,
+.te-list-item .icon,
+.progress-wrap,
+.te-slider-nav,
+.te-menu-sidebar-close-btn,
+.te-testimonial-card .quote-icon .icon,
+.loader-bg,
+.te-icon-card.style-3,
+.te-pagination ul li a.active,
+.te-pagination ul li a:hover,
+.te-basic-pagination ul li .page-numbers.current,
+.te-basic-pagination ul li .page-numbers:hover,
+.te-accordion .accordion-button::after,
+.te-faq-accordion .accordion-button::after,
+.te-pricing-card.featured .te-pricing-header,
+.te-pricing-card .te-pricing-btn .te-theme-btn,
+.te-service-details-sidebar .te-widget-cta,
+.te-project-details-nav a:hover,
+.te-comment-form button[type="submit"],
+.te-search-form button[type="submit"],
+.te-newsletter-form button[type="submit"],
+.te-sidebar-widget .tagcloud a:hover,
+.wpcf7-submit,
+.wp-block-button__link {
+  background-color: var(--dara-primary) !important;
+  background: var(--dara-primary) !important;
+}
+
+/* Primary orange to Dara Blue - Border */
+.te-theme-btn,
+.te-theme-btn.style-2,
+.btn-primary,
+.te-info-card.style-2:hover,
+.te-pagination ul li a.active,
+.te-pagination ul li a:hover,
+.te-basic-pagination ul li .page-numbers.current,
+.te-basic-pagination ul li .page-numbers:hover,
+.te-accordion .accordion-button:not(.collapsed),
+.te-pricing-card.featured,
+.te-sidebar-widget .tagcloud a:hover,
+.te-blog-details-content blockquote {
+  border-color: var(--dara-primary) !important;
+}
+
+/* Secondary hover states - Dara Secondary Blue */
+.te-theme-btn:hover,
+.te-theme-btn.style-2:hover,
+.te-theme-btn.style-3:hover,
+.btn-primary:hover,
+.te-call-btn .icon:hover,
+.te-social-profile a:hover,
+.progress-wrap:hover,
+.te-slider-nav:hover,
+.video-card .video-play:hover,
+.video-slider-card .play-btn a:hover,
+.te-pricing-card .te-pricing-btn .te-theme-btn:hover,
+.te-pagination ul li a.active:hover,
+.te-project-details-nav a,
+.te-comment-form button[type="submit"]:hover,
+.te-search-form button[type="submit"]:hover,
+.te-newsletter-form button[type="submit"]:hover,
+.wpcf7-submit:hover {
+  background-color: var(--dara-secondary) !important;
+  background: var(--dara-secondary) !important;
+}
+
+/* Stroke colors */
+.progress-wrap svg.progress-circle path {
+  stroke: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Header - Elegant & Refined
+   ============================================ */
+
+/* Sticky logo positioning - add left margin */
+.te-sticky-logo {
+  margin-left: 15px !important;
+}
+
+/* ============================================
+   Header - Elegant & Refined
+   ============================================ */
+.header-area .header-top {
+  background-color: var(--dara-primary) !important;
+  padding: 8px 0;
+}
+
+.header-area.style-3 .te-header-menu-area {
+  background-color: var(--dara-dark) !important;
+  backdrop-filter: blur(10px);
+}
+
+.header-area.style-3.te-sticky-header-active .te-header-menu-area {
+  background-color: rgba(35, 31, 32, 0.98) !important;
+  box-shadow: var(--dara-shadow-md);
+}
+
+/* Navigation - Clean and elegant */
+.te-main-menu ul li a {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: var(--dara-transition);
+  font-size: 14px !important;
+  padding: 35px 15px !important;
+  color: var(--dara-white) !important;
+}
+
+.te-main-menu ul li a:hover,
+.te-main-menu ul li.active > a {
+  color: var(--dara-secondary) !important;
+}
+
+.te-main-menu ul li ul {
+  background-color: var(--dara-dark) !important;
+  border-radius: var(--dara-radius-md);
+  box-shadow: var(--dara-shadow-lg);
+  border: 1px solid rgba(144, 171, 212, 0.1);
+  min-width: 200px;
+}
+
+.te-main-menu ul li ul li a {
+  font-size: 13px !important;
+  padding: 12px 20px !important;
+  color: var(--dara-text-muted) !important;
+  font-weight: 400;
+}
+
+.te-main-menu ul li ul li a:hover {
+  color: var(--dara-secondary) !important;
+  background-color: rgba(75, 112, 169, 0.1);
+  padding-left: 25px !important;
+}
+
+/* Header Button Styling */
+.te-header-btn .te-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition);
+}
+
+.te-header-btn .te-call-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.te-header-btn .icon {
+  background-color: var(--dara-primary) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--dara-transition);
+}
+
+.te-header-btn .icon:hover {
+  background-color: var(--dara-secondary) !important;
+  transform: scale(1.1);
+}
+
+.te-header-btn .icon i {
+  color: var(--dara-white) !important;
+  font-size: 16px;
+}
+
+.te-call-btn .call-info span {
+  display: block;
+  font-size: 12px;
+  color: var(--dara-text-muted);
+  margin-bottom: 2px;
+}
+
+.te-call-btn .call-info a {
+  font-size: 12px;
+  color: var(--dara-white) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--dara-transition-fast);
+}
+
+.te-call-btn .call-info a:hover {
+  color: var(--dara-secondary) !important;
+}
+
+/* Mobile Menu Toggle Button */
+.te-mobile-menu-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+  color: var(--dara-white) !important;
+  transition: var(--dara-transition);
+  border: none;
+  font-size: 18px;
+}
+
+.te-mobile-menu-toggle-btn:hover {
+  background-color: var(--dara-secondary) !important;
+  transform: scale(1.05);
+}
+
+/* Header Area Responsive Adjustments */
+@media (max-width: 1199px) {
+  .te-main-menu ul li a {
+    padding: 30px 12px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .te-header-btn {
+    display: none;
+  }
+
+  .te-main-menu ul li a {
+    padding: 20px 15px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .te-main-menu ul li a {
+    padding: 15px 10px !important;
+    font-size: 12px !important;
+  }
+
+  .row.menu-wrapper {
+    padding: 0 15px;
+  }
+}
+
+/* ============================================
+   Hero Slider - Dramatic & Professional
+   ============================================ */
+.slider-area.style-1 {
+  background-color: var(--dara-dark) !important;
+}
+
+.slider-area .te-slider-label {
+  color: rgba(75, 112, 169, 0.08) !important;
+  font-weight: 700;
+}
+
+.te-slider-short-title {
+  color: var(--dara-secondary) !important;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.te-slider-title {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.te-slider-title span {
+  color: var(--dara-primary) !important;
+}
+
+.te-slider-short-desc {
+  color: var(--dara-text-muted);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ============================================
+   Section Titles - Sophisticated
+   ============================================ */
+.te-section-title .short-title,
+.te-section-title .short-title.only-divider,
+.short-title-wrapper .short-title,
+.short-title-wrapper .short-title.only-divider {
+  color: var(--dara-primary) !important;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.te-section-title .short-title::before,
+.te-section-title .short-title::after,
+.te-section-title .short-title.only-divider::before,
+.te-section-title .short-title.only-divider::after,
+.short-title-wrapper .short-title::before,
+.short-title-wrapper .short-title::after,
+.short-title-wrapper .short-title.only-divider::before,
+.short-title-wrapper .short-title.only-divider::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  height: 1px;
+  opacity: 0.5;
+}
+
+.te-section-title .title {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.te-section-title .title span {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Info Cards - Clean & Professional
+   ============================================ */
+.te-info-card.style-2 {
+  background-color: rgba(75, 112, 169, 0.05) !important;
+  border: 1px solid rgba(75, 112, 169, 0.15) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  transition: var(--dara-transition);
+}
+
+.te-info-card.style-2:hover {
+  background-color: var(--dara-primary) !important;
+  transform: translateY(-8px);
+  box-shadow: var(--dara-shadow-primary);
+}
+
+.te-info-card .title a {
+  font-weight: 600;
+  transition: var(--dara-transition-fast);
+}
+
+.te-info-card .read-btn a {
+  color: var(--dara-primary) !important;
+  font-weight: 500;
+}
+
+.te-info-card:hover .read-btn a {
+  color: var(--dara-white) !important;
+}
+
+.te-info-card.style-2 .icon img {
+  filter: brightness(0) invert(1);
+  transition: var(--dara-transition);
+}
+
+/* ============================================
+   Icon Cards - Minimal & Modern
+   ============================================ */
+.te-icon-card .icon {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-md);
+  transition: var(--dara-transition);
+}
+
+.te-icon-card:hover .icon {
+  transform: scale(1.05);
+  box-shadow: var(--dara-shadow-primary);
+}
+
+.te-icon-card.style-3 .te-icon {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+  border-radius: var(--dara-radius-md);
+}
+
+.te-icon-card .title {
+  font-weight: 600;
+  color: var(--dara-text-dark);
+}
+
+.te-icon-card .desc {
+  color: var(--dara-text-dark-muted);
+  line-height: 1.7;
+}
+
+/* ============================================
+   About Section - Refined
+   ============================================ */
+.te-company-foundation-wrapper {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-lg);
+}
+
+.about-image-card-shape-one img,
+.about-image-card-shape-two img {
+  filter: hue-rotate(200deg) saturate(0.8) !important;
+}
+
+/* Fix orange border on about-image-card .image-two */
+.about-image-card .image-two {
+  border-left-color: var(--dara-primary) !important;
+  border-left: 14px solid var(--dara-primary) !important;
+}
+
+/* Fix orange border on about-info */
+.about-info {
+  border-top-color: var(--dara-primary) !important;
+  border-top: 6px solid var(--dara-primary) !important;
+}
+
+/* ============================================
+   CTA Section - Impactful
+   ============================================ */
+.cta-card.style-1 .cta-content-wrapper {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-lg);
+}
+
+.cta-card.style-2 .image::before {
+  background-color: var(--dara-primary) !important;
+  opacity: 0.9;
+}
+
+/* ============================================
+   Portfolio Section - Gallery Style
+   ============================================ */
+.portfolio-slider-area.style-1 {
+  background-color: var(--dara-dark) !important;
+}
+
+.te-portfolio-card.style-2 .te-content-wrapper {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(75, 112, 169, 0.95) 100%
+  ) !important;
+}
+
+.te-portfolio-card {
+  border-radius: var(--dara-radius-lg);
+  overflow: hidden;
+}
+
+.te-portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--dara-shadow-lg);
+}
+
+/* ============================================
+   Testimonial Section - Trust Building
+   ============================================ */
+.testimonial-slider-area.style-1 {
+  background-color: var(--dara-cream) !important;
+}
+
+.testimonial-slider-area.style-1 .te-section-title .title,
+.testimonial-slider-area.style-1 .te-section-title .short-title {
+  color: var(--dara-dark) !important;
+}
+
+.te-testimonial-card {
+  background-color: var(--dara-white) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  box-shadow: var(--dara-shadow-sm);
+  border: 1px solid rgba(35, 31, 32, 0.05);
+  transition: var(--dara-transition);
+}
+
+.te-testimonial-card:hover {
+  box-shadow: var(--dara-shadow-md);
+  transform: translateY(-3px);
+}
+
+.te-testimonial-card .content p,
+.te-testimonial-card .name,
+.te-testimonial-card .designation {
+  color: var(--dara-dark) !important;
+}
+
+.te-testimonial-card .content p {
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--dara-text-dark-muted) !important;
+}
+
+.te-testimonial-card .quote-icon .icon i {
+  color: var(--dara-primary) !important;
+}
+
+.te-testimonial-card .rating i {
+  color: var(--dara-primary) !important;
+}
+
+.te-slider-nav {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition);
+}
+
+.te-slider-nav:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Video Section - Cinematic
+   ============================================ */
+.video-card .video-play {
+  background-color: var(--dara-primary) !important;
+  border-radius: 50%;
+  transition: var(--dara-transition);
+}
+
+.video-card .video-play:hover {
+  background-color: var(--dara-secondary) !important;
+  transform: scale(1.1);
+}
+
+.video-slider-card .play-btn a {
+  border-radius: 50%;
+}
+
+/* ============================================
+   Form Section - Clean Inputs
+   ============================================ */
+.appointment-area.style-1 {
+  background-color: var(--dara-primary) !important;
+}
+
+.te-post-comments-form.style-2 {
+  background-color: var(--dara-dark) !important;
+  border-radius: var(--dara-radius-lg);
+}
+
+.te-post-comments-form input,
+.te-post-comments-form textarea {
+  border-radius: var(--dara-radius-sm) !important;
+  border: 1px solid rgba(144, 171, 212, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  transition: var(--dara-transition-fast);
+}
+
+.te-post-comments-form input:focus,
+.te-post-comments-form textarea:focus {
+  border-color: var(--dara-secondary) !important;
+  box-shadow: 0 0 0 3px rgba(144, 171, 212, 0.15);
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================================
+   Team Section - Professional
+   ============================================ */
+.te-team-card.style-2 .te-content-wrapper {
+  background-color: var(--dara-primary) !important;
+  border-radius: 0 0 var(--dara-radius-lg) var(--dara-radius-lg);
+}
+
+.te-team-card {
+  border-radius: var(--dara-radius-lg);
+  overflow: hidden;
+  transition: var(--dara-transition);
+}
+
+.te-team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--dara-shadow-lg);
+}
+
+.te-team-card .social a {
+  transition: var(--dara-transition-fast);
+}
+
+.te-team-card .social a:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Why Choose Section - Impactful
+   ============================================ */
+.why-choose-area.style-1 {
+  background-color: var(--dara-dark) !important;
+}
+
+.te-list-item .icon {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+}
+
+.divider-line {
+  background-color: rgba(144, 171, 212, 0.2) !important;
+}
+
+/* ============================================
+   Blog Posts - Editorial Style
+   ============================================ */
+.te-post-card.style-1 .te-post-date {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+}
+
+.te-post-card {
+  border-radius: var(--dara-radius-lg);
+  overflow: hidden;
+  transition: var(--dara-transition);
+}
+
+.te-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--dara-shadow-md);
+}
+
+.te-post-card .read-btn {
+  color: var(--dara-primary) !important;
+  font-weight: 500;
+  transition: var(--dara-transition-fast);
+}
+
+.te-post-card .read-btn:hover {
+  color: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Footer - Professional & Organized
+   ============================================ */
+.footer.style-1 {
+  background-color: var(--dara-dark) !important;
+}
+
+.footer-bottom-area {
+  background-color: rgba(75, 112, 169, 0.05) !important;
+  border-top: 1px solid rgba(144, 171, 212, 0.1) !important;
+}
+
+.te-social-profile a {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition);
+}
+
+.te-social-profile a:hover {
+  background-color: var(--dara-secondary) !important;
+  transform: translateY(-3px);
+}
+
+.te-footer-widget-title {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.te-footer-widget-title::after {
+  background-color: var(--dara-primary) !important;
+  height: 2px;
+}
+
+.te-latest-post-meta {
+  color: var(--dara-secondary) !important;
+}
+
+/* Footer links */
+.te_widget_nav_menu ul li a,
+.te-footer-widget-contact a {
+  transition: var(--dara-transition-fast);
+}
+
+.te_widget_nav_menu ul li a:hover,
+.te-footer-widget-contact a:hover {
+  color: var(--dara-secondary) !important;
+  padding-left: 5px;
+}
+
+/* ============================================
+   Scroll to Top - Subtle & Elegant
+   ============================================ */
+.progress-wrap {
+  background-color: var(--dara-primary) !important;
+  border-radius: 50% !important;
+  box-shadow: var(--dara-shadow-md) !important;
+  border: none !important;
+  width: 50px !important;
+  height: 50px !important;
+  transition: var(--dara-transition) !important;
+}
+
+.progress-wrap:hover {
+  background-color: var(--dara-secondary) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--dara-shadow-lg);
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: var(--dara-secondary) !important;
+  fill: none !important;
+}
+
+/* Scroll to top icon/arrow - center positioning and remove orange */
+.progress-wrap::after,
+.progress-wrap i,
+.progress-wrap svg,
+.progress-wrap .arrow,
+.progress-wrap .progress-icon,
+.progress-wrap .fa-arrow-up,
+.progress-wrap .fa-angle-up,
+.progress-wrap [class*="arrow"],
+.progress-wrap [class*="up"] {
+  color: var(--dara-white) !important;
+  fill: var(--dara-white) !important;
+  stroke: var(--dara-white) !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.progress-wrap svg path,
+.progress-wrap svg circle,
+.progress-wrap svg polyline,
+.progress-wrap svg line,
+.progress-wrap svg polygon {
+  stroke: var(--dara-white) !important;
+  fill: var(--dara-white) !important;
+}
+
+/* Any icon inside progress-wrap - force white */
+.progress-wrap *,
+.progress-wrap *::before,
+.progress-wrap *::after {
+  color: var(--dara-white) !important;
+  fill: var(--dara-white) !important;
+  stroke: var(--dara-white) !important;
+}
+
+/* Scroll to top text */
+.progress-wrap .progress-text {
+  color: var(--dara-white) !important;
+}
+
+/* Force override any orange in scroll button */
+.progress-wrap [style*="#4b70a9"],
+.progress-wrap [style*="orange"] {
+  color: var(--dara-white) !important;
+  background-color: transparent !important;
+  fill: var(--dara-white) !important;
+  stroke: var(--dara-white) !important;
+}
+
+/* ============================================
+   Page Header / Breadcrumb - Elegant
+   ============================================ */
+.page-breadcrumb-area {
+  background-color: var(--dara-dark) !important;
+}
+
+.page-breadcrumb-area .page-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(75, 112, 169, 0.85) 0%,
+    rgba(35, 31, 32, 0.95) 100%
+  ) !important;
+}
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.breadcrumb-list ul li a {
+  transition: var(--dara-transition-fast);
+}
+
+.breadcrumb-list ul li a:hover,
+.breadcrumb-list ul li.active a {
+  color: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Mobile Menu - Clean
+   ============================================ */
+.te-menu-sidebar-area {
+  background-color: var(--dara-dark) !important;
+}
+
+.te-menu-sidebar-close-btn {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm);
+}
+
+.te-mobile-menu-toggle-btn i {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Preloader - Branded
+   ============================================ */
+.loader-bg {
+  background-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Contact Page - Professional & Elegant
+   ============================================ */
+
+/* Contact Info Cards */
+.contact-info-area {
+  background-color: var(--dara-cream) !important;
+  padding: 100px 0 !important;
+}
+
+.te-icon-card.style-3 {
+  background-color: var(--dara-white) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  transition: var(--dara-transition);
+  border: 1px solid rgba(75, 112, 169, 0.1) !important;
+  padding: 40px 30px !important;
+  height: 100%;
+  box-shadow: var(--dara-shadow-sm);
+}
+
+.te-icon-card.style-3:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--dara-shadow-md);
+  border-color: var(--dara-primary) !important;
+}
+
+.te-icon-card.style-3 .te-icon {
+  background-color: var(--dara-primary) !important;
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: var(--dara-radius-md) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: var(--dara-transition);
+}
+
+.te-icon-card.style-3:hover .te-icon {
+  background-color: var(--dara-secondary) !important;
+  transform: scale(1.1);
+}
+
+.te-icon-card.style-3 .te-icon i {
+  color: var(--dara-white) !important;
+  font-size: 28px;
+}
+
+.te-icon-card.style-3 .content .title {
+  color: var(--dara-dark) !important;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.te-icon-card.style-3 .content .desc {
+  color: var(--dara-text-dark-muted) !important;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: var(--dara-transition-fast);
+}
+
+.te-icon-card.style-3 .content .desc:hover,
+.te-icon-card.style-3 .content .desc a:hover {
+  color: var(--dara-primary) !important;
+}
+
+.te-icon-card.style-3 .content .desc a {
+  color: var(--dara-text-dark-muted) !important;
+  text-decoration: none;
+}
+
+/* Contact Map Area */
+.contact-map-area {
+  position: relative;
+  padding: 120px 0 !important;
+  background-color: var(--dara-dark) !important;
+}
+
+@media (max-width: 991px) {
+  .contact-map-area {
+    padding: 80px 0 !important;
+  }
+}
+
+.contact-map-area .te-map-widget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .contact-map-area .te-map-widget {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-map-area .te-map-widget iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(0.3) brightness(0.9);
+}
+
+/* Contact Form - Style 3 (Over Map) */
+.contact-map-area .te-post-comments-form.style-3 {
+  background-color: var(--dara-white) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  padding: 60px 50px !important;
+  box-shadow: var(--dara-shadow-lg);
+  position: relative;
+  z-index: 2;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .contact-map-area .te-post-comments-form.style-3 {
+    padding: 40px 25px !important;
+  }
+}
+
+.contact-map-area .te-post-comments-form.style-3 .comment-respond {
+  background-color: var(--dara-white) !important;
+  padding: 0 !important;
+}
+
+.contact-map-area .te-post-comments-form.style-3 .te-section-title .short-title,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-section-title
+  .short-title.only-divider,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title-wrapper
+  .short-title,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title-wrapper
+  .short-title.only-divider {
+  color: var(--dara-primary) !important;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* Fix divider lines (::before and ::after) for contact section */
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-section-title
+  .short-title::before,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-section-title
+  .short-title::after,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title-wrapper
+  .short-title::before,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title-wrapper
+  .short-title::after,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title.only-divider::before,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .short-title.only-divider::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-primary) !important;
+}
+
+.contact-map-area .te-post-comments-form.style-3 .te-section-title .title {
+  color: var(--dara-dark) !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-map-area .te-post-comments-form.style-3 .te-section-desc p {
+  color: var(--dara-text-dark-muted) !important;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.contact-map-area .te-post-comments-form.style-3 input,
+.contact-map-area .te-post-comments-form.style-3 textarea,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-email input,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-name input,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-message textarea {
+  background-color: var(--dara-white) !important;
+  border: 2px solid rgba(35, 31, 32, 0.1) !important;
+  border-radius: var(--dara-radius-sm) !important;
+  color: var(--dara-dark) !important;
+  padding: 16px 20px !important;
+  font-size: 16px !important;
+  font-weight: 400;
+  transition: var(--dara-transition-fast);
+  width: 100%;
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+}
+
+.contact-map-area .te-post-comments-form.style-3 input::placeholder,
+.contact-map-area .te-post-comments-form.style-3 textarea::placeholder,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-contacts-email
+  input::placeholder,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-contacts-name
+  input::placeholder,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-contacts-message
+  textarea::placeholder {
+  color: var(--dara-text-dark-muted) !important;
+  opacity: 0.7;
+}
+
+.contact-map-area .te-post-comments-form.style-3 input:focus,
+.contact-map-area .te-post-comments-form.style-3 textarea:focus,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-email input:focus,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-name input:focus,
+.contact-map-area
+  .te-post-comments-form.style-3
+  .te-contacts-message
+  textarea:focus {
+  border-color: var(--dara-primary) !important;
+  box-shadow: 0 0 0 3px rgba(75, 112, 169, 0.1) !important;
+  outline: none !important;
+  background-color: var(--dara-white) !important;
+}
+
+.contact-map-area .te-post-comments-form.style-3 textarea,
+.contact-map-area .te-post-comments-form.style-3 .te-contacts-message textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-map-area .te-post-comments-form.style-3 .te-theme-btn {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+  padding: 16px 40px !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--dara-radius-sm) !important;
+  transition: var(--dara-transition);
+  width: auto;
+  margin-top: 10px;
+}
+
+.contact-map-area .te-post-comments-form.style-3 .te-theme-btn:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--dara-shadow-primary);
+}
+
+/* Appointment Area - Style 1 (Home Page) */
+.appointment-area.style-1 {
+  background-color: var(--dara-primary) !important;
+  padding: 100px 0 !important;
+  position: relative;
+}
+
+.appointment-area.style-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 112, 169, 0.95) 0%,
+    rgba(61, 92, 138, 0.95) 100%
+  );
+  z-index: 0;
+}
+
+.appointment-area.style-1 .container {
+  position: relative;
+  z-index: 1;
+}
+
+.appointment-area.style-1 .te-post-comments-form.style-2 {
+  background-color: var(--dara-dark) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  padding: 60px 50px !important;
+  box-shadow: var(--dara-shadow-lg);
+}
+
+.appointment-area.style-1 .te-section-title .short-title {
+  color: var(--dara-secondary) !important;
+}
+
+.appointment-area.style-1 .te-section-title .title {
+  color: var(--dara-white) !important;
+}
+
+.appointment-area.style-1 .te-section-desc p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.appointment-area.style-1 .te-post-comments-form.style-2 input,
+.appointment-area.style-1 .te-post-comments-form.style-2 textarea {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(144, 171, 212, 0.3) !important;
+  color: var(--dara-white) !important;
+  border-radius: var(--dara-radius-sm) !important;
+}
+
+.appointment-area.style-1 .te-post-comments-form.style-2 input::placeholder,
+.appointment-area.style-1 .te-post-comments-form.style-2 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.appointment-area.style-1 .te-post-comments-form.style-2 input:focus,
+.appointment-area.style-1 .te-post-comments-form.style-2 textarea:focus {
+  border-color: var(--dara-secondary) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(144, 171, 212, 0.2);
+}
+
+.appointment-area.style-1 .te-theme-btn {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+  color: var(--dara-dark) !important;
+}
+
+.appointment-area.style-1 .te-theme-btn:hover {
+  background-color: var(--dara-white) !important;
+  border-color: var(--dara-white) !important;
+  color: var(--dara-dark) !important;
+}
+
+/* Contact Form Input Fields - All Styles */
+.te-contacts-email,
+.te-contacts-name,
+.te-contacts-message {
+  margin-bottom: 20px;
+}
+
+.te-contacts-email input,
+.te-contacts-name input,
+.te-contacts-message textarea,
+.comment-form input,
+.comment-form textarea,
+.comment-form select,
+.comment-respond input,
+.comment-respond textarea,
+.comment-respond select {
+  border-radius: var(--dara-radius-sm) !important;
+  transition: var(--dara-transition-fast);
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  width: 100%;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="tel"],
+.comment-form input[type="number"],
+.comment-form textarea,
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
+.comment-respond input[type="tel"],
+.comment-respond input[type="number"],
+.comment-respond textarea {
+  border: 2px solid rgba(144, 171, 212, 0.3) !important;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus,
+.comment-form select:focus,
+.comment-respond input:focus,
+.comment-respond textarea:focus,
+.comment-respond select:focus,
+.comment-respond .form-select:focus {
+  border-color: var(--dara-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(75, 112, 169, 0.1) !important;
+}
+
+/* Remove any orange from contact sections */
+.contact-info-area *,
+.contact-map-area *,
+.appointment-area * {
+  /* Force override any orange */
+}
+
+.contact-info-area .te-icon-card.style-3 .te-icon,
+.contact-map-area .te-post-comments-form button,
+.appointment-area .te-theme-btn {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+.contact-info-area .te-icon-card.style-3 .te-icon:hover,
+.contact-map-area .te-post-comments-form button:hover,
+.appointment-area .te-theme-btn:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+}
+
+/* ============================================
+   Brand Slider - Clean
+   ============================================ */
+.brand-slider-area.style-2 {
+  background-color: var(--dara-cream) !important;
+}
+
+/* ============================================
+   Buttons - Refined
+   ============================================ */
+.te-theme-btn {
+  background-color: var(--dara-primary) !important;
+  border: 2px solid var(--dara-primary) !important;
+  border-radius: var(--dara-radius-sm) !important;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 14px 32px !important;
+  transition: var(--dara-transition);
+}
+
+.te-theme-btn:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--dara-shadow-primary);
+}
+
+/* Outline button variant */
+.te-theme-btn.style-2 {
+  background-color: transparent !important;
+  color: var(--dara-white) !important;
+  border: 2px solid var(--dara-white) !important;
+}
+
+.te-theme-btn.style-2:hover {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Pagination - Clean
+   ============================================ */
+.te-pagination ul li a,
+.te-basic-pagination ul li .page-numbers {
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition-fast);
+}
+
+.te-pagination ul li a.active,
+.te-pagination ul li a:hover,
+.te-basic-pagination ul li .page-numbers.current,
+.te-basic-pagination ul li .page-numbers:hover {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Accordion - Modern
+   ============================================ */
+.te-accordion .accordion-item,
+.te-faq-accordion .accordion-item {
+  border-radius: var(--dara-radius-md) !important;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.te-accordion .accordion-button,
+.te-faq-accordion .accordion-button {
+  font-weight: 500;
+}
+
+.te-accordion .accordion-button:not(.collapsed),
+.te-faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--dara-primary) !important;
+  background-color: rgba(75, 112, 169, 0.05);
+}
+
+.te-accordion .accordion-button::after,
+.te-faq-accordion .accordion-button::after {
+  background-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Pricing Cards - Professional
+   ============================================ */
+.te-pricing-card {
+  border-radius: var(--dara-radius-lg);
+  transition: var(--dara-transition);
+}
+
+.te-pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--dara-shadow-lg);
+}
+
+.te-pricing-card.featured {
+  border: 2px solid var(--dara-primary);
+}
+
+.te-pricing-card.featured .te-pricing-header {
+  background-color: var(--dara-primary) !important;
+}
+
+.te-pricing-card .te-pricing-feature li i {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Service Details - Clean Layout
+   ============================================ */
+.te-service-details-sidebar .te-widget-cta {
+  background-color: var(--dara-primary) !important;
+  border-radius: var(--dara-radius-lg);
+}
+
+.te-service-details-sidebar .te-widget-list li a:hover,
+.te-service-details-sidebar .te-widget-list li a:hover i {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Portfolio Filter - Modern Tabs
+   ============================================ */
+.te-portfolio-filter-nav button {
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition-fast);
+}
+
+.te-portfolio-filter-nav button.active,
+.te-portfolio-filter-nav button:hover {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Blog Details - Editorial
+   ============================================ */
+.te-blog-details-content blockquote {
+  border-left-color: var(--dara-primary) !important;
+  background-color: rgba(75, 112, 169, 0.05);
+  border-radius: 0 var(--dara-radius-md) var(--dara-radius-md) 0;
+}
+
+.te-blog-details-content blockquote::before {
+  color: var(--dara-primary) !important;
+}
+
+.te-comment-author-info .reply-btn {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Project Details - Organized
+   ============================================ */
+.te-project-details-info .te-project-info-item .icon i {
+  color: var(--dara-primary) !important;
+}
+
+.te-project-details-nav a {
+  border-radius: var(--dara-radius-sm);
+}
+
+.te-project-details-nav a:hover {
+  background-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Tags & Categories - Clean
+   ============================================ */
+.te-sidebar-widget .tagcloud a {
+  border-radius: var(--dara-radius-sm);
+  transition: var(--dara-transition-fast);
+}
+
+.te-sidebar-widget .tagcloud a:hover {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Error Page - Branded
+   ============================================ */
+.te-error-content .error-code {
+  color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Logo Text Fallback
+   ============================================ */
+.dara-logo-text {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dara-white);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.dara-logo-text .arabic {
+  font-size: 18px;
+  color: var(--dara-secondary);
+}
+
+/* ============================================
+   Elegant Spacing & Layout
+   ============================================ */
+section {
+  position: relative;
+}
+
+/* Reduce visual clutter */
+.te-section-title {
+  margin-bottom: 50px;
+}
+
+/* ============================================
+   Light Background Sections
+   ============================================ */
+.background-light-section,
+.te-bg-light {
+  background-color: var(--dara-cream) !important;
+}
+
+.background-light-section h2,
+.background-light-section h3,
+.background-light-section h4,
+.background-light-section .te-section-title .title,
+.te-bg-light .te-section-title .title {
+  color: var(--dara-dark) !important;
+}
+
+.background-light-section p,
+.te-bg-light p {
+  color: var(--dara-text-dark-muted) !important;
+}
+
+/* ============================================
+   Counter Section
+   ============================================ */
+.te-counter-wrapper .counter,
+.te-counter-wrapper .suffix {
+  color: var(--dara-white) !important;
+  font-weight: 700;
+}
+
+/* ============================================
+   Smooth Transitions for All Interactive Elements
+   ============================================ */
+a,
+button,
+.te-theme-btn,
+.te-info-card,
+.te-icon-card,
+.te-team-card,
+.te-post-card,
+.te-portfolio-card,
+.te-testimonial-card,
+.te-pricing-card,
+img {
+  transition: var(--dara-transition);
+}
+
+/* ============================================
+   Image Hover Effects
+   ============================================ */
+.te-info-card .image img,
+.te-post-card .image img,
+.te-team-card .image img,
+.te-portfolio-card .image img {
+  transition: var(--dara-transition);
+}
+
+.te-info-card:hover .image img,
+.te-post-card:hover .image img,
+.te-team-card:hover .image img,
+.te-portfolio-card:hover .image img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   RTL Support for Arabic
+   ============================================ */
+[dir="rtl"] body,
+.rtl body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ============================================
+   Final Polish - Remove ALL remaining orange
+   ============================================ */
+
+/* Why Choose Area - Orange background fix */
+.why-choose-area .why-choose-bg-area,
+.why-choose-bg-area {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Remove orange vertical bars and decorative elements */
+.why-choose-area .why-choose-bg-area::before,
+.why-choose-area .why-choose-bg-area::after,
+.why-choose-area::before,
+.why-choose-area::after,
+.appointment-area::before,
+.appointment-area::after,
+.appointment-area .shape::before,
+.appointment-area .shape::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Any decorative bars or lines */
+[class*="bar"][style*="#4b70a9"],
+[class*="stripe"][style*="#4b70a9"],
+[class*="line"][style*="#4b70a9"],
+[class*="divider"][style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Vertical bars specifically */
+.vertical-bar,
+.te-vertical-bar,
+.shape-bar,
+.decorative-bar {
+  background-color: var(--dara-primary) !important;
+}
+
+/* About image card shapes - ensure no orange */
+.about-image-card .shape-image img,
+.about-image-card-shape-three img {
+  filter: hue-rotate(180deg) saturate(0.6) brightness(1.1) !important;
+}
+
+/* CTA Card overlays */
+.cta-card .overlay,
+.cta-card.style-1 .cta-content-wrapper .overlay {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Slider area shapes and stripes */
+.slider-area .te-slider-shape,
+.slider-area .shape,
+.te-slider-shape img,
+.slider-shape-one,
+.slider-shape-two,
+.te-hero-shape {
+  filter: hue-rotate(200deg) saturate(0.7) !important;
+}
+
+/* Hero slider backgrounds with orange */
+.swiper-slide .te-slider-bg::before,
+.te-slider-item::before,
+.slider-area::before {
+  background-color: var(--dara-primary) !important;
+}
+
+/* SVG and icon colors */
+.te-slider-badge,
+.te-army-badge,
+.te-badge,
+.army-badge {
+  display: none !important;
+}
+
+/* Image circle backgrounds */
+.te-slider-image-wrapper::before,
+.slider-image-card::before,
+.te-hero-image::before,
+.about-image-card .shape::before,
+.about-image-card-shape-one,
+.about-image-card-shape-two {
+  background-color: var(--dara-primary) !important;
+}
+
+/* All SVG elements with orange */
+svg path[fill="#4b70a9"],
+svg path[fill="#4b70a9"],
+svg circle[fill="#4b70a9"],
+svg circle[fill="#4b70a9"],
+svg rect[fill="#4b70a9"],
+svg rect[fill="#4b70a9"] {
+  fill: var(--dara-primary) !important;
+}
+
+/* Info card borders */
+.te-info-card.style-1,
+.about-info,
+.donate-feature-card {
+  border-color: var(--dara-primary) !important;
+}
+
+/* Header button area */
+.te-header-btn .te-icon:hover,
+.te-header-btn .te-cta-btn {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Remaining text colors */
+.te-widget a:hover,
+.zoom-instagram-widget p a {
+  color: var(--dara-primary) !important;
+}
+
+/* All remaining orange backgrounds */
+[class*="background-orange"],
+[class*="bg-orange"],
+.background-orange,
+.bg-orange {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Counter and Foundation wrapper */
+.te-company-foundation-wrapper .icon,
+.te-company-foundation .icon {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* Slider Swiper navigation dots */
+.swiper-pagination-bullet-active {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Completely hide military-specific elements */
+.te-army-logo,
+.army-logo,
+[class*="army"],
+[class*="military"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Force all orange to blue via filter on specific images */
+.slider-area img[src*="shape"],
+.slider-area img[src*="badge"],
+.about-area img[src*="shape"] {
+  filter: hue-rotate(200deg) saturate(0.6) brightness(1.1) !important;
+}
+
+/* ============================================
+   Make Design More Elegant & Classy
+   ============================================ */
+
+/* Reduce clutter - hide decorative shapes */
+.te-slider-shape-one,
+.te-slider-shape-two,
+.te-slider-shape-three,
+.slider-shape {
+  opacity: 0.3;
+}
+
+/* More refined section spacing */
+.te-py-120 {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+/* Elegant text rendering */
+h1,
+h2,
+h3 {
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Override inline styles */
+[style*="#4b70a9"],
+[style*="#4b70a9"],
+[style*="rgb(255, 77, 36)"] {
+  color: var(--dara-primary) !important;
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+.te-theme-btn[style],
+.btn-primary[style] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   Apply Blue Filter to Orange Shapes in Slider
+   ============================================ */
+
+/* Target the slider background and shape images */
+.slider-area .te-slider-bg,
+.slider-area .slider-bg,
+.te-slider-item .te-slider-bg,
+.swiper-slide .te-slider-bg {
+  filter: hue-rotate(180deg) saturate(0.8) !important;
+}
+
+/* Target specific shape images */
+img[src*="slider-shape"],
+img[src*="shape-"],
+img[src*="orange"],
+img[src*="stripe"],
+img[src*="feature-1"],
+img[src*="slider-bg"] {
+  filter: hue-rotate(180deg) saturate(0.7) brightness(0.95) !important;
+}
+
+/* About section shapes */
+.about-image-card-shape-one img,
+.about-image-card-shape-two img,
+img[src*="shape-one"],
+img[src*="shape-two"],
+img[src*="shape-three"] {
+  filter: hue-rotate(180deg) saturate(0.6) brightness(1.1) !important;
+}
+
+/* CTA shape images */
+img[src*="cta-shape"] {
+  filter: hue-rotate(180deg) saturate(0.7) !important;
+}
+
+/* ============================================
+   Hide Military/Army Badges
+   ============================================ */
+.te-slider-badge-wrapper,
+.slider-badge,
+.te-award-badge {
+  display: none !important;
+}
+
+/* ============================================
+   Clean & Elegant Slider - Refined Look
+   ============================================ */
+.slider-area.style-1 {
+  overflow: hidden;
+}
+
+.te-slider-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Make slider text more elegant */
+.te-slider-title {
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em;
+}
+
+.te-slider-short-desc {
+  font-weight: 300 !important;
+  opacity: 0.85;
+  max-width: 500px;
+}
+
+/* Slider navigation arrows - more subtle */
+.te-slider-nav-prev,
+.te-slider-nav-next {
+  background-color: rgba(75, 112, 169, 0.3) !important;
+  border: 1px solid rgba(144, 171, 212, 0.5) !important;
+  backdrop-filter: blur(4px);
+}
+
+.te-slider-nav-prev:hover,
+.te-slider-nav-next:hover {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* ============================================
+   COMPREHENSIVE ORANGE REMOVAL - ALL ELEMENTS
+   ============================================ */
+
+/* Slider Arrow Buttons - All Variants */
+.slider-area .te-slider-wrapper .slider-arrow-btn,
+.slider-area .slider-arrow-btn,
+.te-slider-wrapper .slider-arrow-btn,
+.slider-arrow-btn.prev-btn,
+.slider-arrow-btn.next-btn,
+.te-slider-nav-prev,
+.te-slider-nav-next,
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.slick-prev,
+.slick-next,
+.slick-arrow {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+.slider-area .te-slider-wrapper .slider-arrow-btn:hover,
+.slider-area .slider-arrow-btn:hover,
+.te-slider-wrapper .slider-arrow-btn:hover,
+.slider-arrow-btn.prev-btn:hover,
+.slider-arrow-btn.next-btn:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.slick-prev:hover,
+.slick-next:hover,
+.slick-arrow:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+}
+
+.slider-area .te-slider-wrapper .slider-arrow-btn i,
+.slider-area .slider-arrow-btn i,
+.slider-arrow-btn.prev-btn i,
+.slider-arrow-btn.next-btn i {
+  color: var(--dara-white) !important;
+}
+
+/* Video Slider Arrows */
+.video-slider-wrapper .slider-arrow-btn,
+.video-slider-wrapper .slider-arrow-btn.prev-btn,
+.video-slider-wrapper .slider-arrow-btn.next-btn {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+.video-slider-wrapper .slider-arrow-btn:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* Testimonial Slider Arrows */
+.te-testimonial-slider-wrapper .slick-arrow,
+.te-testimonial-slider-wrapper .slick-prev,
+.te-testimonial-slider-wrapper .slick-next {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+.te-testimonial-slider-wrapper .slick-arrow:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* Pagination Arrows */
+.te-basic-pagination ul .prev,
+.te-basic-pagination ul .next,
+.page-links ul .prev,
+.page-links ul .next,
+.wp-block-query-pagination-previous,
+.wp-block-query-pagination-next,
+.nav-next a,
+.nav-previous a,
+.comment-navigation .nav-next a,
+.comment-navigation .nav-previous a {
+  color: var(--dara-primary) !important;
+  background-color: transparent !important;
+}
+
+.te-basic-pagination ul .prev:hover,
+.te-basic-pagination ul .next:hover,
+.wp-block-query-pagination-previous:hover,
+.wp-block-query-pagination-next:hover {
+  color: var(--dara-secondary) !important;
+}
+
+/* Post Gallery Navigation */
+.post-gallery-btn.prev-btn,
+.post-gallery-btn.next-btn {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+.post-gallery-btn.prev-btn:hover,
+.post-gallery-btn.next-btn:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* Any element with orange background */
+[class*="orange"],
+[class*="Orange"],
+.bg-orange,
+.background-orange {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Any element with orange color */
+.text-orange,
+.color-orange {
+  color: var(--dara-primary) !important;
+}
+
+/* SVG paths and fills */
+svg path[fill="#4b70a9"],
+svg path[fill="#4b70a9"],
+svg path[fill="rgb(255, 77, 36)"],
+svg circle[fill="#4b70a9"],
+svg circle[fill="#4b70a9"],
+svg rect[fill="#4b70a9"],
+svg rect[fill="#4b70a9"],
+svg polygon[fill="#4b70a9"],
+svg polygon[fill="#4b70a9"] {
+  fill: var(--dara-primary) !important;
+}
+
+/* SVG strokes */
+svg path[stroke="#4b70a9"],
+svg path[stroke="#4b70a9"],
+svg circle[stroke="#4b70a9"],
+svg circle[stroke="#4b70a9"] {
+  stroke: var(--dara-primary) !important;
+}
+
+/* Background images with orange - apply filter */
+[style*="background-image"][style*="orange"],
+[style*="background-image"][style*="ff4d24"] {
+  filter: hue-rotate(180deg) saturate(0.7) !important;
+}
+
+/* All buttons and links with orange */
+button[style*="#4b70a9"],
+button[style*="#4b70a9"],
+a[style*="#4b70a9"],
+a[style*="#4b70a9"],
+.btn[style*="#4b70a9"],
+.btn[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+/* Scroll to top button */
+.scroll-top,
+.scroll-to-top,
+#scroll-top,
+.back-to-top {
+  background-color: var(--dara-primary) !important;
+}
+
+.scroll-top:hover,
+.scroll-to-top:hover,
+#scroll-top:hover,
+.back-to-top:hover {
+  background-color: var(--dara-secondary) !important;
+}
+
+/* Progress bars */
+.progress-bar[style*="#4b70a9"],
+.progress-bar[style*="#4b70a9"],
+.te-progress-bar[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Badges and labels */
+.badge[style*="#4b70a9"],
+.label[style*="#4b70a9"],
+.te-badge[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+/* Timeline elements */
+.timeline-item[style*="#4b70a9"],
+.timeline-dot[style*="#4b70a9"],
+.timeline-line[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Event cards */
+.event-card[style*="#4b70a9"],
+.te-event-card[style*="#4b70a9"] {
+  border-color: var(--dara-primary) !important;
+}
+
+/* Donation elements */
+.donate-btn[style*="#4b70a9"],
+.donation-btn[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Any remaining orange borders */
+[style*="border-color: #4b70a9"],
+[style*="border-color: #4b70a9"],
+[style*="border-color: rgb(255, 77, 36)"] {
+  border-color: var(--dara-primary) !important;
+}
+
+/* Force override any computed styles */
+* {
+  /* This will catch any remaining orange via CSS variables if they exist */
+}
+
+/* Specific override for any element that might have orange via JavaScript */
+.elementor-element[data-settings*="ff4d24"],
+.elementor-element[data-settings*="FF4D24"] {
+  --e-global-color-primary: var(--dara-primary) !important;
+}
+
+/* Override any CSS custom properties that might contain orange */
+:root {
+  --orange-color: var(--dara-primary) !important;
+  --primary-orange: var(--dara-primary) !important;
+  --accent-orange: var(--dara-primary) !important;
+}
+
+/* ============================================
+   OVERRIDE ORANGE FROM BASE style.css
+   ============================================ */
+
+/* Override all orange colors from style.css */
+.comment-respond input:focus,
+.comment-respond textarea:focus,
+.comment-respond .form-select:focus {
+  border-color: var(--dara-primary) !important;
+  box-shadow: 0 0 0 3px rgba(75, 112, 169, 0.1) !important;
+}
+
+/* Override orange text colors */
+.comment-respond label,
+.comment-respond .short-title-wrapper .short-title,
+.comment-respond .short-title-wrapper .short-title.only-divider,
+.contact-map-area .comment-respond .short-title-wrapper .short-title,
+.contact-map-area
+  .comment-respond
+  .short-title-wrapper
+  .short-title.only-divider {
+  color: var(--dara-primary) !important;
+}
+
+/* Fix divider lines for all contact forms */
+.comment-respond .short-title-wrapper .short-title::before,
+.comment-respond .short-title-wrapper .short-title::after,
+.comment-respond .short-title-wrapper .short-title.only-divider::before,
+.comment-respond .short-title-wrapper .short-title.only-divider::after,
+.contact-map-area .comment-respond .short-title-wrapper .short-title::before,
+.contact-map-area .comment-respond .short-title-wrapper .short-title::after,
+.contact-map-area
+  .comment-respond
+  .short-title-wrapper
+  .short-title.only-divider::before,
+.contact-map-area
+  .comment-respond
+  .short-title-wrapper
+  .short-title.only-divider::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-primary) !important;
+}
+
+/* Info card orange colors */
+.te-info-card .content .te-read-more .te-theme-btn {
+  color: var(--dara-primary) !important;
+  border-color: rgba(144, 171, 212, 0.3) !important;
+}
+
+.te-info-card .content .te-read-more .te-theme-btn:hover {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+.te-info-card.style-2 .read-btn a:hover {
+  color: var(--dara-primary) !important;
+}
+
+.te-info-card.style-1 {
+  border-top-color: var(--dara-primary) !important;
+}
+
+.te-info-card.style-3 .read-btn a:hover {
+  color: var(--dara-primary) !important;
+}
+
+.te-info-card .te-image-wrapper .overlay {
+  background-color: var(--dara-primary) !important;
+  opacity: 0.6;
+}
+
+/* Catch-all for any remaining orange text */
+* {
+  /* Force text color override if orange detected */
+}
+
+/* Override any ::before and ::after pseudo-elements */
+*::before[style*="#4b70a9"],
+*::after[style*="#4b70a9"],
+.te-theme-btn::before,
+.te-theme-btn::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Slider pagination bullets */
+.swiper-pagination-bullet-active,
+.slick-dots li.slick-active button,
+.te-slider-pagination .active {
+  background-color: var(--dara-primary) !important;
+}
+
+.swiper-pagination-bullet,
+.slick-dots li button {
+  border-color: var(--dara-primary) !important;
+}
+
+/* Form elements */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Select dropdowns */
+select:focus,
+.nice-select:focus {
+  border-color: var(--dara-primary) !important;
+}
+
+.nice-select .option.selected,
+.nice-select .option:hover {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Tabs */
+.nav-tabs .nav-link.active,
+.te-tab-nav .nav-link.active {
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-primary) !important;
+}
+
+/* Accordion active states */
+.accordion-button:not(.collapsed) {
+  color: var(--dara-primary) !important;
+}
+
+/* Tooltips */
+.tooltip-inner {
+  background-color: var(--dara-primary) !important;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before,
+.tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+  border-top-color: var(--dara-primary) !important;
+}
+
+/* Popovers */
+.popover-header {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Alerts */
+.alert-primary {
+  background-color: rgba(75, 112, 169, 0.1) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-primary) !important;
+}
+
+/* Breadcrumb active */
+.breadcrumb-item.active {
+  color: var(--dara-primary) !important;
+}
+
+/* Dropdown menu active */
+.dropdown-menu .active,
+.dropdown-item.active {
+  background-color: var(--dara-primary) !important;
+}
+
+/* List group active */
+.list-group-item.active {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Modal close button */
+.modal-header .btn-close:focus {
+  box-shadow: 0 0 0 0.25rem rgba(75, 112, 169, 0.25) !important;
+}
+
+/* Carousel indicators */
+.carousel-indicators [data-bs-target].active {
+  background-color: var(--dara-primary) !important;
+}
+
+/* Spinner/loader */
+.spinner-border-primary {
+  border-color: var(--dara-primary) !important;
+  border-right-color: transparent !important;
+}
+
+/* Toast notifications */
+.toast-header {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+/* Final catch-all - any element with orange in computed style */
+* {
+  /* This ensures any dynamically added orange is caught */
+}
+
+/* ============================================
+   SPECIFIC CTA & SIDEBAR WIDGET ORANGE REMOVAL
+   ============================================ */
+
+/* Contact us now for Service widget */
+.te_widget_cta,
+.te-widget-cta,
+.widget.te_widget_cta {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+.te_widget_cta h4,
+.te_widget_cta .te-widget-title h4,
+.te-widget-cta h4,
+.widget.te_widget_cta h4 {
+  color: var(--dara-white) !important;
+}
+
+.te_widget_cta ul li,
+.te-widget-cta ul li {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.te_widget_cta .icon,
+.te-widget-cta .icon {
+  /* background-color: rgba(255, 255, 255, 0.1) !important; */
+  color: var(--dara-white) !important;
+}
+
+.te_widget_cta .text,
+.te-widget-cta .text {
+  color: var(--dara-white) !important;
+}
+
+/* Service categories widget */
+.te_widget_service_categories,
+.te-widget-service-categories {
+  background-color: var(--dara-dark) !important;
+  border: 1px solid rgba(144, 171, 212, 0.1) !important;
+}
+
+.te_widget_service_categories h4,
+.te_widget_service_categories .te-widget-title h4 {
+  color: var(--dara-white) !important;
+  border-bottom: 1px solid rgba(144, 171, 212, 0.1) !important;
+}
+
+.te_widget_service_categories ul li a {
+  color: var(--dara-text-muted) !important;
+  transition: var(--dara-transition-fast);
+}
+
+.te_widget_service_categories ul li a:hover {
+  color: var(--dara-secondary) !important;
+  padding-left: 5px;
+}
+
+/* PDF download widget */
+.pdf-download-btn,
+.te-pdf-download-btn {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  transition: var(--dara-transition);
+}
+
+.pdf-download-btn:hover,
+.te-pdf-download-btn:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--dara-shadow-primary);
+}
+
+.pdf-download-btn .icon,
+.pdf-download-btn .download-icon i {
+  color: var(--dara-white) !important;
+}
+
+.pdf-download-btn .content .title,
+.pdf-download-btn .content .sub-title {
+  color: var(--dara-white) !important;
+}
+
+/* ============================================
+   SPECIFIC CONTACT & FORM ORANGE REMOVAL
+   ============================================ */
+
+/* Contact form submit buttons - ensure no orange */
+.comment-form button[type="submit"],
+.comment-form .te-theme-btn,
+.te-post-comments-form button,
+.te-post-comments-form .te-theme-btn,
+.contact-form-btn,
+.wpcf7-submit,
+.wpcf7-form button[type="submit"] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+}
+
+.comment-form button[type="submit"]:hover,
+.comment-form .te-theme-btn:hover,
+.te-post-comments-form button:hover,
+.contact-form-btn:hover,
+.wpcf7-submit:hover {
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+}
+
+/* Contact form labels */
+.comment-form label,
+.te-post-comments-form label,
+.contact-form label {
+  color: var(--dara-dark) !important;
+}
+
+/* Contact info icons */
+.te-footer-widget-contact .contact-icon i,
+.te-header-contact-info i,
+.contact-info-area .te-icon-card i {
+  color: var(--dara-primary) !important;
+}
+
+/* Contact links */
+.te-footer-widget-contact a,
+.te-header-contact-info a,
+.contact-info-area a {
+  color: var(--dara-text-dark-muted) !important;
+  transition: var(--dara-transition-fast);
+}
+
+.te-footer-widget-contact a:hover,
+.te-header-contact-info a:hover,
+.contact-info-area a:hover {
+  color: var(--dara-primary) !important;
+}
+
+/* Appointment area specific overrides */
+.appointment-area .about-image-card img {
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.appointment-area .shape-image img,
+.appointment-area .shape-image,
+.appointment-area img[src*="shape-three"],
+.appointment-area img[src*="shape-"] {
+  filter: hue-rotate(180deg) saturate(0.5) brightness(1.1) !important;
+}
+
+/* Remove any orange bars or vertical elements in appointment area */
+.appointment-area .about-image-card::before,
+.appointment-area .about-image-card::after,
+.appointment-area .image-one::before,
+.appointment-area .image-one::after,
+.appointment-area .image-two::before,
+.appointment-area .image-two::after,
+.appointment-area .image-three::before,
+.appointment-area .image-three::after {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Any background images with orange in appointment area */
+.appointment-area [style*="background"][style*="#4b70a9"],
+.appointment-area [style*="background"][style*="orange"] {
+  background-color: var(--dara-primary) !important;
+  background-image: none !important;
+}
+
+/* Contact page breadcrumb */
+.page-breadcrumb-area .page-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(75, 112, 169, 0.85) 0%,
+    rgba(35, 31, 32, 0.95) 100%
+  ) !important;
+}
+
+/* Ensure no orange in any form validation */
+.comment-form input:invalid,
+.comment-form textarea:invalid {
+  border-color: rgba(144, 171, 212, 0.5) !important;
+}
+
+.comment-form input:valid,
+.comment-form textarea:valid {
+  border-color: rgba(75, 112, 169, 0.5) !important;
+}
+
+/* Contact form success/error messages */
+.comment-form .success-message,
+.comment-form .error-message,
+.wpcf7-mail-sent-ok,
+.wpcf7-validation-errors {
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Contact form spinner/loader */
+.comment-form .spinner,
+.wpcf7-spinner {
+  border-color: var(--dara-primary) !important;
+  border-top-color: transparent !important;
+}
+
+/* Any remaining orange in contact sections - force override */
+.contact-info-area [style*="#4b70a9"],
+.contact-map-area [style*="#4b70a9"],
+.appointment-area [style*="#4b70a9"],
+.te-post-comments-form [style*="#4b70a9"],
+.comment-form [style*="#4b70a9"],
+.comment-respond [style*="#4b70a9"],
+.contact-info-area *[style*="#4b70a9"],
+.contact-map-area *[style*="#4b70a9"],
+.contact-map-area *[style*="#4b70a9"] {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-primary) !important;
+}
+
+/* Force override orange in all contact section text and decorative elements */
+.contact-map-area .te-section-title .short-title,
+.contact-map-area .te-section-title .title span,
+.contact-map-area .short-title,
+.contact-map-area .short-title.only-divider {
+  color: var(--dara-primary) !important;
+}
+
+/* Override any decorative lines or shapes near images in contact section */
+.contact-map-area .form-image::before,
+.contact-map-area .form-image::after,
+.contact-map-area .te-post-comments-form.style-3 .form-image::before,
+.contact-map-area .te-post-comments-form.style-3 .form-image::after,
+.contact-map-area .te-post-comments-form.style-3::before,
+.contact-map-area .te-post-comments-form.style-3::after {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
+
+/* Override orange focus border color from style.css */
+.comment-respond input:focus,
+.comment-respond textarea:focus,
+.comment-respond .form-select:focus {
+  border-color: var(--dara-primary) !important;
+  box-shadow: 0 0 0 3px rgba(75, 112, 169, 0.1) !important;
+}
+
+/* Override orange text color from style.css */
+.comment-respond label,
+.comment-respond .short-title-wrapper .short-title {
+  color: var(--dara-primary) !important;
+}
+
+/* Contact form checkbox and radio */
+.comment-form input[type="checkbox"],
+.comment-form input[type="radio"] {
+  accent-color: var(--dara-primary) !important;
+}
+
+.comment-form input[type="checkbox"]:checked,
+.comment-form input[type="radio"]:checked {
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+}
