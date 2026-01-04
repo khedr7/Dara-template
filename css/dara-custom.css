@@ -2680,3 +2680,66 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
     opacity: 1;
 }
+
+/* ============================================
+   PORTFOLIO SLIDER ARROW POSITIONING
+   ============================================ */
+
+.portfolio-slider-wrapper {
+  position: relative;
+}
+
+.portfolio-slider-wrapper .slider-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-slider-wrapper .slider-arrow-btn:hover {
+  background-color: var(--dara-primary-dark) !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.portfolio-slider-wrapper .slider-arrow-btn.prev-btn {
+  left: -25px;
+}
+
+.portfolio-slider-wrapper .slider-arrow-btn.next-btn {
+  right: -25px;
+}
+
+/* Responsive adjustments for portfolio slider arrows */
+@media (max-width: 768px) {
+  .portfolio-slider-wrapper .slider-arrow-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .portfolio-slider-wrapper .slider-arrow-btn.prev-btn {
+    left: -20px;
+  }
+
+  .portfolio-slider-wrapper .slider-arrow-btn.next-btn {
+    right: -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-slider-wrapper .slider-arrow-btn {
+    display: none; /* Hide arrows on very small screens, rely on touch/swipe */
+  }
+}

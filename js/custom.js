@@ -234,24 +234,66 @@
         Portfolio Slider JS
         ============================*/
     $(".portfolio-slider-wrapper").slick({
-      slidesToShow: 5,
+      slidesToShow: 4, // Show 4 instead of 5 to ensure arrows are always visible
+      slidesToScroll: 1,
       infinite: true,
       autoplay: false,
       draggable: true,
-      arrows: false,
-      loop: true,
+      arrows: true,
+      swipe: true,
+      touchMove: true,
       dots: false,
-      variableWidth: true,
       speed: 1500,
+      cssEase: "ease-in-out",
+      centerMode: false,
+      variableWidth: false,
       prevArrow:
         "<span class='slider-arrow-btn prev-btn'><i class='fa-solid fa-angles-left'></i></span>",
       nextArrow:
         "<span class='slider-arrow-btn next-btn'><i class='fa-solid fa-angles-right'></i></span>",
       responsive: [
         {
-          breakpoint: 767,
+          breakpoint: 1400,
           settings: {
+            slidesToShow: 5, // Only show 5 on very large screens
+            infinite: true,
+            centerMode: false,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            infinite: true,
+            centerMode: false,
+          },
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            infinite: true,
+            centerMode: false,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
             autoplay: true,
+            infinite: true,
+            centerMode: true,
+            centerPadding: "40px",
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            autoplay: true,
+            infinite: true,
+            centerMode: true,
+            centerPadding: "30px",
           },
         },
       ],
