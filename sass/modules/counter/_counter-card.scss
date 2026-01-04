@@ -6,6 +6,28 @@
   justify-content: center;
   padding: 30px 20px;
 
+  @include lg {
+      gap: 35px;
+      padding: 28px 18px;
+  }
+
+  @include md {
+      gap: 30px;
+      padding: 25px 16px;
+  }
+
+  @include sm {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 25px 15px;
+  }
+
+  @include xs {
+      gap: 15px;
+      padding: 20px 12px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -36,6 +58,26 @@
     line-height: 55.65px;
     letter-spacing: -1.59px;
     color: $white;
+
+    @include lg {
+        font-size: 45px;
+        line-height: 52px;
+    }
+
+    @include md {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    @include sm {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    @include xs {
+        font-size: 34px;
+        line-height: 40px;
+    }
   }
   .title {
     font-size: 24px;
@@ -43,5 +85,21 @@
     line-height: 130%;
     color: $white;
     margin-bottom: 0;
+
+    @include lg {
+        font-size: 22px;
+    }
+
+    @include md {
+        font-size: 20px;
+    }
+
+    @include sm {
+        font-size: 18px;
+    }
+
+    @include xs {
+        font-size: 16px;
+    }
   }
 }

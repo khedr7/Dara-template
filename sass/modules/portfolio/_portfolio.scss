@@ -86,6 +86,22 @@
         align-items: center;
         border-radius: 5px;
         padding: 18px 10px;
+
+        @include lg {
+            padding: 16px 8px;
+        }
+
+        @include md {
+            padding: 14px 6px;
+        }
+
+        @include sm {
+            padding: 12px 5px;
+        }
+
+        @include xs {
+            padding: 10px 4px;
+        }
         // margin-bottom: -100%;
         @include transition;
         transform: scaleY(0.3);
@@ -95,6 +111,26 @@
         font-size: 18px;
         line-height: 36px;
         font-weight: 400;
+
+        @include lg {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        @include md {
+            font-size: 15px;
+            line-height: 28px;
+        }
+
+        @include sm {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        @include xs {
+            font-size: 13px;
+            line-height: 20px;
+        }
       }
       .title {
         margin-bottom: 0;
@@ -102,6 +138,26 @@
         font-size: 24px;
         line-height: 39px;
         font-weight: 900;
+
+        @include lg {
+            font-size: 22px;
+            line-height: 35px;
+        }
+
+        @include md {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        @include sm {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @include xs {
+            font-size: 16px;
+            line-height: 24px;
+        }
       }
 
       .btn-wrapper {
@@ -164,8 +220,32 @@
   .slick-list {
     margin: 0 -12px;
 
+    @include md {
+        margin: 0 -8px;
+    }
+
+    @include sm {
+        margin: 0 -6px;
+    }
+
+    @include xs {
+        margin: 0 -4px;
+    }
+
     .slick-slide-item {
       margin: 0 12px;
+
+      @include md {
+          margin: 0 8px;
+      }
+
+      @include sm {
+          margin: 0 6px;
+      }
+
+      @include xs {
+          margin: 0 4px;
+      }
 
       &:nth-child(odd) {
         .te-portfolio-card {

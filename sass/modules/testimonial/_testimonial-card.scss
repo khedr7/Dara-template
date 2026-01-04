@@ -4,6 +4,22 @@
     z-index: 2;
     background-color: $gray-700;
 
+    @include lg {
+        padding: 35px;
+    }
+
+    @include md {
+        padding: 30px;
+    }
+
+    @include sm {
+        padding: 25px;
+    }
+
+    @include xs {
+        padding: 20px;
+    }
+
 
     .shape {
         position: absolute;
@@ -45,6 +61,12 @@
             flex-wrap: wrap;
             flex-direction: row-reverse;
 
+            @include sm {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
             .icon {
                 color: $primary-color;
                 font-size: 42px;
@@ -52,6 +74,18 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include md {
+                    font-size: 38px;
+                }
+
+                @include sm {
+                    font-size: 32px;
+                }
+
+                @include xs {
+                    font-size: 28px;
+                }
             }
         }
         .content {
@@ -60,6 +94,22 @@
             line-height: 24px;
             color: $text-color;
             margin-bottom: 0;
+
+            @include md {
+                font-size: 17px;
+                line-height: 22px;
+            }
+
+            @include sm {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            @include xs {
+                font-size: 15px;
+                line-height: 18px;
+            }
+
             p {
                 margin-bottom: 0;
             }
@@ -70,8 +120,16 @@
             align-items: center;
             justify-content: space-between;
 
-            @include rmaxwd(570) {
-                align-items: flex-end;
+            @include md {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            @include sm {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
             }
             .te-user-info {
                 display: flex;
@@ -102,12 +160,36 @@
                     line-height: initial;
                     color: $white;
                     margin-bottom: 5px;
+
+                    @include md {
+                        font-size: 22px;
+                    }
+
+                    @include sm {
+                        font-size: 20px;
+                    }
+
+                    @include xs {
+                        font-size: 18px;
+                    }
                 }
                 .designation {
                     font-size: 18px;
                     font-weight: 500;
                     line-height: initial;
                     color: $text-color;
+
+                    @include md {
+                        font-size: 17px;
+                    }
+
+                    @include sm {
+                        font-size: 16px;
+                    }
+
+                    @include xs {
+                        font-size: 15px;
+                    }
                 }
             }
 

@@ -204,10 +204,16 @@
                 flex-direction: column;
                 padding: 80px 0;
                 text-align: center;
+                gap: 40px;
+            }
+            @include xs {
+                padding: 60px 0;
+                gap: 30px;
             }
             @include md {
                 padding: 100px 0;
                 align-items: center;
+                gap: 50px;
             }
             .te-slider-column {
                 width: 50%;
@@ -271,6 +277,11 @@
                         line-height: 44px;
                         margin-bottom: 20px;
                     }
+                    @include xs {
+                        font-size: 32px;
+                        line-height: 38px;
+                        margin-bottom: 15px;
+                    }
                 }
                 .te-slider-short-desc {
                     font-size: 18px;
@@ -290,6 +301,10 @@
                         font-size: 18px;
                         line-height: 32px;
                     }
+                    @include xs {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
                 }
                 .te-slider-btn-wrapper {
                     padding-top: 52px;
@@ -302,6 +317,13 @@
                     @include sm {
                         padding-top: 30px;
                         justify-content: center;
+                        gap: 20px;
+                    }
+                    @include xs {
+                        padding-top: 25px;
+                        gap: 15px;
+                        flex-direction: column;
+                        align-items: center;
                     }
 
                     .te-call-btn {
@@ -333,12 +355,32 @@
                                 font-weight: 500;
                                 line-height: 24px;
                                 color: #335371;
+
+                                @include sm {
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+
+                                @include xs {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                }
                             }
                             .te-text {
                                 font-size: 18px;
                                 font-weight: 700;
                                 line-height: 26px;
                                 color: $white;
+
+                                @include sm {
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+
+                                @include xs {
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
                             }
                         }
                     }

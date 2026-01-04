@@ -4,9 +4,19 @@
     gap: 24px;
     align-items: center;
 
+    @include md {
+        gap: 20px;
+    }
+
     @include sm {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    @include xs {
+        gap: 12px;
     }
 
     &:last-child {
@@ -40,6 +50,21 @@
         align-items: center;
         justify-content: center;
 
+        @include md {
+            width: 90px;
+            height: 90px;
+        }
+
+        @include sm {
+            width: 80px;
+            height: 80px;
+        }
+
+        @include xs {
+            width: 70px;
+            height: 70px;
+        }
+
         img {
             width: auto;
             @include transition;
@@ -60,6 +85,18 @@
             line-height: initial;
             color: $white;
             margin-bottom: 0;
+
+            @include md {
+                font-size: 22px;
+            }
+
+            @include sm {
+                font-size: 20px;
+            }
+
+            @include xs {
+                font-size: 18px;
+            }
         }
         .desc {
             font-family: $body-font;
@@ -68,6 +105,18 @@
             font-weight: 500;
             color: $white;
             margin-bottom: 0;
+
+            @include md {
+                font-size: 17px;
+            }
+
+            @include sm {
+                font-size: 16px;
+            }
+
+            @include xs {
+                font-size: 15px;
+            }
 
             a {
                 color: $text-color;

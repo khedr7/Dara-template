@@ -47,6 +47,18 @@
   .te-contacts-name,
   .single-input-field {
     margin-bottom: 30px;
+
+    @include md {
+        margin-bottom: 25px;
+    }
+
+    @include sm {
+        margin-bottom: 20px;
+    }
+
+    @include xs {
+        margin-bottom: 18px;
+    }
   }
   label {
     display: block;
@@ -54,6 +66,21 @@
     font-weight: 600;
     color: $white;
     margin-bottom: 30px;
+
+    @include md {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    @include sm {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    @include xs {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
   }
   .checkbox-field-wrapper {
     display: flex;
@@ -97,6 +124,24 @@
     background-color: transparent;
     font-family: $body-font !important;
     border: solid 1px $border-color;
+
+    @include md {
+        height: 55px;
+        font-size: 17px;
+        padding: 0 18px;
+    }
+
+    @include sm {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 16px;
+    }
+
+    @include xs {
+        height: 45px;
+        font-size: 15px;
+        padding: 0 14px;
+    }
   }
   *::-webkit-input-placeholder {
     color: $white;
@@ -132,6 +177,27 @@
     height: 190px;
     margin-bottom: 30px;
     border: solid 1px $border-color;
+
+    @include md {
+        padding: 18px;
+        font-size: 17px;
+        height: 170px;
+        margin-bottom: 25px;
+    }
+
+    @include sm {
+        padding: 16px;
+        font-size: 16px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    @include xs {
+        padding: 14px;
+        font-size: 15px;
+        height: 130px;
+        margin-bottom: 18px;
+    }
   }
   input:focus,
   textarea:focus,

@@ -64,6 +64,24 @@
     transform: translateY(-50%);
     position: relative;
 
+    @include lg {
+        padding-right: 60px;
+    }
+
+    @include md {
+        padding-right: 40px;
+    }
+
+    @include sm {
+        padding-right: 20px;
+        transform: translateY(-40%);
+    }
+
+    @include xs {
+        padding-right: 15px;
+        transform: translateY(-35%);
+    }
+
     .content {
       width: 100%;
       display: flex;
@@ -76,6 +94,22 @@
       position: relative;
       @include  transition;
 
+      @include lg {
+          padding: 25px;
+      }
+
+      @include md {
+          padding: 20px;
+      }
+
+      @include sm {
+          padding: 15px;
+      }
+
+      @include xs {
+          padding: 12px;
+      }
+
       .title {
         font-size: 26px;
         font-weight: 700;
@@ -84,6 +118,22 @@
         color: $white;
         font-family: $heading-font;
         margin: 0;
+
+        @include lg {
+            font-size: 24px;
+        }
+
+        @include md {
+            font-size: 22px;
+        }
+
+        @include sm {
+            font-size: 20px;
+        }
+
+        @include xs {
+            font-size: 18px;
+        }
       }
       .desc {
         font-size: 18px;
@@ -92,6 +142,26 @@
         color: $text-color;
         font-family: $heading-font;
         margin-bottom: 10px;
+
+        @include lg {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        @include md {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include sm {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        @include xs {
+            font-size: 14px;
+            line-height: 18px;
+        }
       }
     }
     .social {
@@ -105,6 +175,14 @@
       visibility: hidden;
       @include transition;
 
+      @include sm {
+          gap: 8px;
+      }
+
+      @include xs {
+          gap: 6px;
+      }
+
       a {
         width: 35px;
         height: 35px;
@@ -116,6 +194,18 @@
         color: $white;
         background-color: $primary-color;
         flex-shrink: 0;
+
+        @include sm {
+            width: 32px;
+            height: 32px;
+            font-size: 13px;
+        }
+
+        @include xs {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+        }
         
         &:hover {
           color: $white;
