@@ -2647,3 +2647,36 @@ select:focus,
   background-color: var(--dara-primary) !important;
   border-color: var(--dara-primary) !important;
 }
+
+/* ============================================
+   LAZY LOADING STYLES
+   ============================================ */
+
+/* Lazy loading placeholder styles */
+img.lazy {
+    background-color: #f0f0f0;
+    background-image: linear-gradient(90deg, #f0f0f0 25%, transparent 25%),
+                      linear-gradient(#f0f0f0 50%, transparent 50%);
+    background-size: 20px 20px;
+    animation: loading-shimmer 1.5s infinite;
+    min-height: 200px; /* Prevent layout shift */
+}
+
+/* Loading animation */
+@keyframes loading-shimmer {
+    0% {
+        background-position: -20px 0, 0 0;
+    }
+    100% {
+        background-position: 20px 0, 0 0;
+    }
+}
+
+/* Smooth transition when image loads */
+img[loading="lazy"] {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
