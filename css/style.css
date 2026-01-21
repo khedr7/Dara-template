@@ -7446,7 +7446,7 @@ body.admin-bar .te-header-menu-area.te-sticky_menu {
 .te-post-item {
   overflow: hidden;
   margin-bottom: 48px;
-  background-color: #111111;
+  background-color: rgba(75, 112, 169, 0.05);
   /* Quote Format Post */
   /* Sticky Post */
 }
@@ -9024,7 +9024,7 @@ body.admin-bar .te-header-menu-area.te-sticky_menu {
   -ms-flex-pack: center;
   justify-content: center;
   color: #ffffff;
-  background-color: #111111;
+  background-color: rgba(75, 112, 169, 0.05);
   height: 60px;
   width: 60px;
   -webkit-transition: all 0.5s ease-out;
@@ -9478,7 +9478,7 @@ body.admin-bar .te-header-menu-area.te-sticky_menu {
 /* Widget */
 .widget {
   margin-bottom: 30px;
-  background-color: #111111;
+  background-color: rgba(75, 112, 169, 0.05);
   padding: 40px;
   /* Widget Instagram Feed */
   /* Widget Title */
@@ -9872,7 +9872,7 @@ body.admin-bar .te-header-menu-area.te-sticky_menu {
 .widget .tagcloud a,
 .widget .wp-block-tag-cloud a {
   color: #ffffff;
-  background-color: #060606;
+  background-color: rgba(75, 112, 169, 0.05);
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
