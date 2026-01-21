@@ -1,22 +1,27 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html dir="ltr" lang="ar">
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="أعمالنا - مجموعة دارا العالمية | Our Projects - Dara International Group"
+      content="مشاريعنا - مجموعة دارا الدولية | Our Projects - Dara International Group"
     />
+
     <meta
       name="keywords"
-      content="projects, portfolio, construction, real estate, infrastructure, مشاريع, أعمال, عقارات"
+      content="projects, portfolio, construction, real estate, infrastructure, مشاريع, محفظة أعمال, إنشاءات, عقارات, بنية تحتية"
     />
+
     <meta name="author" content="Dara International Group" />
 
-    <title>أعمالنا | Our Projects - مجموعة دارا العالمية</title>
+    <title>مشاريعنا | Our Projects - مجموعة دارا الدولية</title>
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo/favicon.jfif" />
 
+    <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.jfif" />
     <link
       rel="apple-touch-icon"
@@ -59,13 +64,16 @@
       href="images/logo/apple-touch-icon-180x180.jfif"
     />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -80,9 +88,16 @@
     <div data-include="partials/preloader.html"></div>
     <div data-include="partials/header.html"></div>
 
-    <div data-include="partials/page-header.html" data-page-title="معرض المشاريع | Gallery" data-page-breadcrumb="معرض المشاريع | Gallery" data-page-bg="images/section-bg/page-header.jpg" data-page-overlay="rgba(35, 31, 32, 0.85)"></div></div>
+    <div
+      data-include="partials/page-header.html"
+      data-page-title="معرض الصور | Gallery"
+      data-page-breadcrumb="معرض الصور | Gallery"
+      data-page-bg="images/section-bg/page-header.jpg"
+      data-page-overlay="rgba(35, 31, 32, 0.85)"
+    ></div>
 
     <!-- Project Page Start -->
+
     <div class="project-page-wrapper te-py-120">
       <div class="container">
         <!-- Section Title -->
@@ -92,271 +107,299 @@
               <div class="te-section-content">
                 <div class="short-title-wrapper">
                   <span class="short-title"
-                    >مشاريعنا المميزة | Featured Projects</span
+                    >المشاريع المميزة | Featured Projects</span
                   >
                 </div>
-                <h2 class="title">نماذج من <span>أعمالنا</span></h2>
+                <h2 class="title">استكشف <span>مشاريعنا</span></h2>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row gy-5">
+        <!-- Filters -->
+        <div class="project-filter-panel" id="projects-filter">
+          <!-- Services Filter -->
+          <div class="filter-block">
+            <div class="filter-block-header">
+              <div class="filter-icon">
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              </div>
+              <div class="filter-copy">
+                <div class="filter-title">الخدمات | Services</div>
+                <div class="filter-subtitle">تصفح المشاريع حسب نوع الخدمة</div>
+              </div>
+            </div>
+
+            <ul class="te-portfolio-filter service-filter">
+              <li class="active" data-filter="*" id="service-all">
+                كل الخدمات
+              </li>
+              <li data-filter=".service-healthcare" id="service-healthcare">
+                الرعاية الصحية
+              </li>
+              <li data-filter=".service-tourism" id="service-tourism">
+                السياحة والفنادق
+              </li>
+              <li data-filter=".service-contracting" id="service-contracting">
+                المقاولات
+              </li>
+              <li data-filter=".service-commercial" id="service-commercial">
+                التجاري والإداري
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categories Filter -->
+          <div class="filter-block">
+            <div class="filter-block-header">
+              <div class="filter-icon">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              </div>
+              <div class="filter-copy">
+                <div class="filter-title">التصنيفات | Categories</div>
+                <div class="filter-subtitle">
+                  تصفح المشاريع حسب الفئة الفرعية
+                </div>
+              </div>
+            </div>
+
+            <ul class="te-portfolio-filter subservice-filter">
+              <li
+                class="active"
+                data-filter="*"
+                id="subservice-all"
+                data-service=""
+              >
+                كل الفئات
+              </li>
+
+              <li
+                data-filter=".cat-hospitals"
+                id="subservice-hospitals"
+                data-service="service-healthcare"
+              >
+                المستشفيات
+              </li>
+
+              <li
+                data-filter=".cat-clinics"
+                id="subservice-clinics"
+                data-service="service-healthcare"
+              >
+                العيادات
+              </li>
+
+              <li
+                data-filter=".cat-labs"
+                id="subservice-labs"
+                data-service="service-healthcare"
+              >
+                المخابر الطبية
+              </li>
+
+              <li
+                data-filter=".cat-hotels"
+                id="subservice-hotels"
+                data-service="service-tourism"
+              >
+                الفنادق
+              </li>
+
+              <li
+                data-filter=".cat-resorts"
+                id="subservice-resorts"
+                data-service="service-tourism"
+              >
+                المنتجعات
+              </li>
+
+              <li
+                data-filter=".cat-restaurants"
+                id="subservice-restaurants"
+                data-service="service-tourism"
+              >
+                المطاعم
+              </li>
+
+              <li
+                data-filter=".cat-infrastructure"
+                id="subservice-infrastructure"
+                data-service="service-contracting"
+              >
+                البنية التحتية
+              </li>
+
+              <li
+                data-filter=".cat-roads-bridges"
+                id="subservice-roads"
+                data-service="service-contracting"
+              >
+                الطرق والجسور
+              </li>
+
+              <li
+                data-filter=".cat-maintenance"
+                id="subservice-maintenance"
+                data-service="service-contracting"
+              >
+                الصيانة
+              </li>
+
+              <li
+                data-filter=".cat-safety"
+                id="subservice-safety"
+                data-service="service-contracting"
+              >
+                أنظمة السلامة
+              </li>
+
+              <li
+                data-filter=".cat-offices"
+                id="subservice-offices"
+                data-service="service-commercial"
+              >
+                المكاتب
+              </li>
+
+              <li
+                data-filter=".cat-warehouses"
+                id="subservice-warehouses"
+                data-service="service-commercial"
+              >
+                المستودعات
+              </li>
+
+              <li
+                data-filter=".cat-residential"
+                id="subservice-residential"
+                data-service="service-commercial"
+              >
+                المشاريع السكنية
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row gy-4" id="projects">
           <div class="col-12">
-            <div class="portfolio-gallery-wrapper">
-              <div class="portfolio-column-in-three">
-                <!-- Project 1: Bait Al Robyan -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p1.jpg" loading="lazy" alt="Bait Al Robyan" loading="lazy" />
+            <div class="te-portfolio-isotope-wrapper row gy-4">
+              <!-- Project 1 -->
+              <div class="col-md-6 col-lg-4 te-single-isotop service-commercial cat-offices">
+                <div class="related-card">
+                  <div class="related-thumb">
+                    <img
+                      src="images/project/v-2/p1.jpg"
+                      loading="lazy"
+                      alt="Bait Al Robyan"
+                    />
+                    <span class="tag"><i class="fa-solid fa-building"></i> مكاتب | Offices</span>
                   </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title"
-                          >تصميم داخلي | Interior Design</span
-                        >
-                        <h3 class="title">
-                          <a href="#"
-                            >مطاعم بيت الروبيان<br />Bait Al Robyan
-                            Restaurants</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
+                  <div class="related-body">
+                    <h3 class="title">
+                      <a href="#">بيت الروبيان<br />Bait Al Robyan</a>
+                    </h3>
+                    <p class="meta">Commercial | Offices</p>
+                    <a class="related-link" href="#">
+                      استعرض المشروع
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-                <!-- Project 2: Laguna Resort -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p2.jpg" loading="lazy" alt="Laguna Resort" loading="lazy" />
+              </div>
+
+              <!-- Project 2 -->
+              <div class="col-md-6 col-lg-4 te-single-isotop service-healthcare cat-hospitals">
+                <div class="related-card">
+                  <div class="related-thumb">
+                    <img
+                      src="images/project/v-2/p2.jpg"
+                      loading="lazy"
+                      alt="Damascus University Hospital"
+                    />
+                    <span class="tag"><i class="fa-solid fa-briefcase-medical"></i> مستشفيات | Hospitals</span>
                   </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title"
-                          >تطوير سياحي | Tourism Development</span
-                        >
-                        <h3 class="title">
-                          <a href="#">منتجع لاقونا<br />Laguna Resort</a>
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 3: Road Works -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p3.jpg" loading="lazy" alt="Road Works" loading="lazy" />
-                  </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title"
-                          >بنية تحتية | Infrastructure</span
-                        >
-                        <h3 class="title">
-                          <a href="#"
-                            >أعمال الطرق والجسور<br />Roads & Bridges</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
+                  <div class="related-body">
+                    <h3 class="title">
+                      <a href="#">مستشفى جامعة دمشق<br />Damascus University Hospital</a>
+                    </h3>
+                    <p class="meta">Healthcare | Hospitals</p>
+                    <a class="related-link" href="#">
+                      استعرض المشروع
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-                <!-- Project 4: Construction -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p4.jpg" loading="lazy" alt="Construction" />
+              </div>
+
+              <!-- Project 3 -->
+              <div class="col-md-6 col-lg-4 te-single-isotop service-tourism cat-hotels">
+                <div class="related-card">
+                  <div class="related-thumb">
+                    <img
+                      src="images/project/v-2/p3.jpg"
+                      loading="lazy"
+                      alt="Lions Mountains Hotel"
+                    />
+                    <span class="tag"><i class="fa-solid fa-mug-hot"></i> فنادق | Hotels</span>
                   </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title">مقاولات | Contracting</span>
-                        <h3 class="title">
-                          <a href="#"
-                            >مشاريع البناء والإنشاء<br />Construction
-                            Projects</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 5: Infrastructure -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p5.jpg" loading="lazy" alt="Infrastructure" />
-                  </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title">شبكات | Utilities</span>
-                        <h3 class="title">
-                          <a href="#"
-                            >شبكات الكهرباء والمياه<br />Utility Networks</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
+                  <div class="related-body">
+                    <h3 class="title">
+                      <a href="#">فندق جبال الأسود<br />Lions Mountains Hotel</a>
+                    </h3>
+                    <p class="meta">Tourism | Hotels</p>
+                    <a class="related-link" href="#">
+                      استعرض المشروع
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-                <!-- Project 6: Smart Lighting -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p6.jpg" loading="lazy" alt="Smart Lighting" />
+              </div>
+
+              <!-- Project 4 -->
+              <div class="col-md-6 col-lg-4 te-single-isotop service-commercial cat-residential">
+                <div class="related-card">
+                  <div class="related-thumb">
+                    <img
+                      src="images/project/v-2/p4.jpg"
+                      loading="lazy"
+                      alt="Residential Construction"
+                    />
+                    <span class="tag"><i class="fa-solid fa-building-user"></i> سكني | Housing</span>
                   </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title"
-                          >إنارة ذكية | Smart Lighting</span
-                        >
-                        <h3 class="title">
-                          <a href="#"
-                            >أنظمة الإنارة الذكية<br />Smart Lighting Systems</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
+                  <div class="related-body">
+                    <h3 class="title">
+                      <a href="#">مشروع سكني متكامل<br />Residential Construction</a>
+                    </h3>
+                    <p class="meta">Commercial | Residential</p>
+                    <a class="related-link" href="#">
+                      استعرض المشروع
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-                <!-- Project 7: Real Estate -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p7.jpg" loading="lazy" alt="Real Estate" />
+              </div>
+
+              <!-- Project 5 -->
+              <div class="col-md-6 col-lg-4 te-single-isotop service-contracting cat-infrastructure">
+                <div class="related-card">
+                  <div class="related-thumb">
+                    <img
+                      src="images/project/v-2/p5.jpg"
+                      loading="lazy"
+                      alt="Infrastructure"
+                    />
+                    <span class="tag"><i class="fa-solid fa-water"></i> بنية تحتية | Infrastructure</span>
                   </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title">تطوير عقاري | Real Estate</span>
-                        <h3 class="title">
-                          <a href="#"
-                            >مشاريع التطوير العقاري<br />Real Estate
-                            Development</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 8: Maintenance -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p8.jpg" loading="lazy" alt="Maintenance" />
-                  </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title">صيانة | Maintenance</span>
-                        <h3 class="title">
-                          <a href="#"
-                            >أعمال الصيانة والتأهيل<br />Maintenance &
-                            Rehabilitation</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 9: Safety Systems -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p9.jpg" loading="lazy" alt="Safety Systems" />
-                  </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title"
-                          >سلامة مرورية | Traffic Safety</span
-                        >
-                        <h3 class="title">
-                          <a href="#"
-                            >أنظمة السلامة المرورية<br />Traffic Safety
-                            Systems</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 10: Consulting -->
-                <div class="portfolio-item">
-                  <div class="portfolio-img">
-                    <img src="images/project/v-2/p10.jpg" loading="lazy" alt="Consulting" />
-                  </div>
-                  <div class="content-wrapper">
-                    <div class="content">
-                      <div class="content-info">
-                        <span class="sub-title">استشارات | Consultancy</span>
-                        <h3 class="title">
-                          <a href="#"
-                            >خدمات الاستشارات الهندسية<br />Engineering
-                            Consultancy</a
-                          >
-                        </h3>
-                      </div>
-                      <div class="icon">
-                        <i
-                          class="fa-solid fa-arrow-right"
-                          style="color: #4b70a9; font-size: 24px"
-                        ></i>
-                      </div>
-                    </div>
+                  <div class="related-body">
+                    <h3 class="title">
+                      <a href="#">شبكات الخدمات العامة<br />Utility Networks</a>
+                    </h3>
+                    <p class="meta">Contracting | Infrastructure</p>
+                    <a class="related-link" href="#">
+                      استعرض المشروع
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -365,6 +408,7 @@
         </div>
       </div>
     </div>
+
     <!-- Project Page End -->
 
     <div data-include="partials/footer.html"></div>
@@ -372,8 +416,3 @@
     <script src="js/bundle.js"></script>
   </body>
 </html>
-
-
-
-
-

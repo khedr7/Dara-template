@@ -165,7 +165,6 @@ button {
 .video-slider-card .play-btn a,
 .appointment-area.style-1,
 .te-team-card.style-2 .te-content-wrapper,
-.te-social-profile a,
 .te-list-item .icon,
 .progress-wrap,
 .te-slider-nav,
@@ -215,7 +214,6 @@ button {
 .te-theme-btn.style-3:hover,
 .btn-primary:hover,
 .te-call-btn .icon:hover,
-.te-social-profile a:hover,
 .progress-wrap:hover,
 .te-slider-nav:hover,
 .video-card .video-play:hover,
@@ -250,12 +248,18 @@ button {
    ============================================ */
 .header-area .header-top {
   background-color: var(--dara-primary) !important;
-  padding: 8px 0;
+  padding: 14px 0;
+}
+
+/* Increase gap below the top header bar so the nav clears it */
+.header-area.style-3 .header-top {
+  padding-bottom: 18px;
 }
 
 .header-area.style-3 .te-header-menu-area {
   background-color: var(--dara-dark) !important;
   backdrop-filter: blur(10px);
+  top: 84px;
 }
 
 .header-area.style-3.te-sticky-header-active .te-header-menu-area {
@@ -508,7 +512,7 @@ button {
 }
 
 .te-info-card.style-2 .icon img {
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
   transition: var(--dara-transition);
 }
 
@@ -790,13 +794,10 @@ button {
 }
 
 .te-social-profile a {
-  background-color: var(--dara-primary) !important;
-  border-radius: var(--dara-radius-sm);
   transition: var(--dara-transition);
 }
 
 .te-social-profile a:hover {
-  background-color: var(--dara-secondary) !important;
   transform: translateY(-3px);
 }
 
@@ -2654,31 +2655,36 @@ select:focus,
 
 /* Lazy loading placeholder styles */
 img.lazy {
-    background-color: #f0f0f0;
-    background-image: linear-gradient(90deg, #f0f0f0 25%, transparent 25%),
-                      linear-gradient(#f0f0f0 50%, transparent 50%);
-    background-size: 20px 20px;
-    animation: loading-shimmer 1.5s infinite;
-    min-height: 200px; /* Prevent layout shift */
+  background-color: #f0f0f0;
+  background-image:
+    linear-gradient(90deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(#f0f0f0 50%, transparent 50%);
+  background-size: 20px 20px;
+  animation: loading-shimmer 1.5s infinite;
+  min-height: 200px; /* Prevent layout shift */
 }
 
 /* Loading animation */
 @keyframes loading-shimmer {
-    0% {
-        background-position: -20px 0, 0 0;
-    }
-    100% {
-        background-position: 20px 0, 0 0;
-    }
+  0% {
+    background-position:
+      -20px 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      20px 0,
+      0 0;
+  }
 }
 
 /* Smooth transition when image loads */
 img[loading="lazy"] {
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 img[loading="lazy"].loaded {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ============================================

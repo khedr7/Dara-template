@@ -580,19 +580,109 @@
     /*
 		Portfolio Isotope Js
 		============================*/
-    $(".te-portfolio-filter").on("click", "li", function () {
-      $("li").removeClass("active");
-      $(this).addClass("active");
-      var filterValue = $(this).attr("data-filter");
-      $grid.isotope({ filter: filterValue });
-    });
-    var $grid = $(".te-portfolio-isotope-wrapper").isotope({
-      itemSelector: ".te-single-isotop",
-      percentPosition: true,
-      masonry: {
-        columnWidth: ".te-single-isotop",
-      },
-    });
+    var $grid = $(".te-portfolio-isotope-wrapper");
+    if ($grid.length) {
+      $grid = $grid.isotope({
+        itemSelector: ".te-single-isotop",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".te-single-isotop",
+        },
+      });
+
+      var activeServiceFilter = "*";
+      var activeSubServiceFilter = "*";
+      var hasDualFilters = $(".project-filter-panel").length > 0;
+
+      var updateSubserviceVisibility = function () {
+        var serviceKey =
+          activeServiceFilter === "*"
+            ? ""
+            : activeServiceFilter.replace(".", "");
+        $(".subservice-filter li").each(function () {
+          var allowed = $(this).data("service");
+          var shouldShow = !allowed || !serviceKey || allowed === serviceKey;
+          if (shouldShow) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+
+        // Reset to "All Categories" when service changes
+        $(".subservice-filter li").removeClass("active");
+        var $allCategories = $(".subservice-filter li[data-filter='*']");
+        $allCategories.addClass("active");
+        activeSubServiceFilter = "*";
+      };
+
+      var applyCombinedFilter = function () {
+        var selectors = [];
+        if (activeServiceFilter !== "*") selectors.push(activeServiceFilter);
+        if (activeSubServiceFilter !== "*")
+          selectors.push(activeSubServiceFilter);
+        var filterValue = selectors.join("") || "*";
+        $grid.isotope({ filter: filterValue });
+        // Ensure layout is updated after filter
+        setTimeout(function () {
+          $grid.isotope("layout");
+        }, 100);
+      };
+
+      if (hasDualFilters) {
+        $(".service-filter").on("click", "li", function () {
+          $(".service-filter li").removeClass("active");
+          $(this).addClass("active");
+          activeServiceFilter = $(this).attr("data-filter") || "*";
+          updateSubserviceVisibility();
+          applyCombinedFilter();
+        });
+
+        $(".subservice-filter").on("click", "li", function () {
+          $(".subservice-filter li").removeClass("active");
+          $(this).addClass("active");
+          activeSubServiceFilter = $(this).attr("data-filter") || "*";
+          applyCombinedFilter();
+        });
+
+        applyCombinedFilter();
+
+        var applyHashFilters = function () {
+          var raw = window.location.hash.replace("#", "");
+          if (!raw) return;
+          var parts = raw.split("&sub=");
+          var serviceId = parts[0];
+          var subId = parts[1];
+          if (serviceId) {
+            var $service = $(
+              "#service-" + serviceId.replace("service-", "") + ",#" + serviceId
+            );
+            if ($service.length) {
+              $service.trigger("click");
+            }
+          }
+          if (subId) {
+            var $sub = $(
+              "#subservice-" + subId.replace("subservice-", "") + ",#" + subId
+            );
+            if ($sub.length) {
+              $sub.trigger("click");
+            }
+          }
+        };
+
+        applyHashFilters();
+        updateSubserviceVisibility();
+        window.addEventListener("hashchange", applyHashFilters);
+      } else {
+        $(".te-portfolio-filter").on("click", "li", function () {
+          $(this).siblings().removeClass("active");
+          $(this).addClass("active");
+          var filterValue = $(this).attr("data-filter") || "*";
+          $grid.isotope({ filter: filterValue });
+        });
+      }
+    }
 
     /*
         Jquery Tilt Js
