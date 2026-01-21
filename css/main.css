@@ -14559,8 +14559,22 @@ button {
 
 /* Contact Info Cards */
 .contact-info-area {
-  background-color: var(--dara-cream) !important;
+  background-color: var(--dara-dark) !important;
   padding: 100px 0 !important;
+}
+.contact-info-area .te-icon-card {
+  background-color: rgba(75, 112, 169, 0.05) !important;
+  border-radius: var(--dara-radius-lg) !important;
+  padding: 40px 30px !important;
+  box-shadow: var(--dara-shadow-sm);
+  border: 1px solid rgba(75, 112, 169, 0.15) !important;
+  transition: var(--dara-transition);
+}
+.contact-info-area .te-icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--dara-shadow-md);
+  border-color: var(--dara-primary) !important;
+  background-color: rgba(75, 112, 169, 0.1) !important;
 }
 
 .te-icon-card.style-3 {
@@ -14889,15 +14903,15 @@ button {
 }
 
 .appointment-area.style-1 .te-theme-btn {
-  background-color: var(--dara-secondary) !important;
-  border-color: var(--dara-secondary) !important;
-  color: var(--dara-dark) !important;
+  background-color: var(--dara-primary) !important;
+  border-color: var(--dara-primary) !important;
+  color: var(--dara-white) !important;
 }
 
 .appointment-area.style-1 .te-theme-btn:hover {
-  background-color: var(--dara-white) !important;
-  border-color: var(--dara-white) !important;
-  color: var(--dara-dark) !important;
+  background-color: var(--dara-secondary) !important;
+  border-color: var(--dara-secondary) !important;
+  color: var(--dara-white) !important;
 }
 
 /* Contact Form Input Fields - All Styles */
