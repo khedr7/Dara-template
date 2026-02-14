@@ -53,28 +53,13 @@
           >
             <div class="te-logo">
               <a href="index.html" class="te-standard-logo">
-                <div class="dara-logo-text">
-                  <span style="font-size: 28px; color: #fff; font-weight: 700"
-                    >DARA GROUP</span
-                  >
-                  <span class="arabic">دارا الدولية</span>
-                </div>
+                <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo" />
               </a>
               <a href="index.html" class="te-sticky-logo">
-                <div class="dara-logo-text">
-                  <span style="font-size: 24px; color: #fff; font-weight: 700"
-                    >DARA</span
-                  >
-                  <span class="arabic" style="font-size: 14px">دارا</span>
-                </div>
+                <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo" />
               </a>
               <a href="index.html" class="te-retina-logo">
-                <div class="dara-logo-text">
-                  <span style="font-size: 28px; color: #fff; font-weight: 700"
-                    >DARA GROUP</span
-                  >
-                  <span class="arabic">دارا الدولية</span>
-                </div>
+                <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo" />
               </a>
             </div>
           </div>
@@ -126,6 +111,13 @@
                           <li><a href="gallery.html#service-commercial&sub=offices">المكاتب</a></li>
                           <li><a href="gallery.html#service-commercial&sub=warehouses">المستودعات</a></li>
                           <li><a href="gallery.html#service-commercial&sub=residential">المشاريع السكنية</a></li>
+                        </ul>
+                      </li>
+                      <li class="te-dropdown">
+                        <a href="service-details.html#service-catering">خدمات الكاترينغ (الإطعام للشركات) | Catering (Corporate Feeding)</a>
+                        <ul class="te-submenu">
+                          <li><a href="gallery.html#service-catering">كل مشاريع الكاترينغ</a></li>
+                          <li><a href="gallery.html#service-catering&sub=corporate-feeding">الإطعام للشركات</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -184,12 +176,7 @@
     <div class="te-menu-sidebar-content">
       <div class="te-menu-sidebar-logo">
         <a href="index.html">
-          <div class="dara-logo-text">
-            <span style="font-size: 24px; color: #fff; font-weight: 700"
-              >DARA GROUP</span
-            >
-            <span class="arabic">دارا الدولية</span>
-          </div>
+          <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo dara-brand-logo-sidebar" />
         </a>
       </div>
       <div class="te-mobile-nav-menu"></div>
@@ -250,10 +237,7 @@
             <div class="te-footer-widget-info">
               <div class="te-footer-logo">
                 <a href="index.html">
-                  <div class="dara-logo-text">
-                    <span style="font-size: 24px; color: #fff; font-weight: 700">DARA GROUP</span>
-                    <span class="arabic">دارا الدولية</span>
-                  </div>
+                  <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo dara-brand-logo-footer" />
                 </a>
               </div>
               <p style="margin-top: 20px">مجموعة دارا الدولية شركة رائدة في التطوير العقاري والمقاولات والسياحة والاستشارات.</p>
@@ -298,6 +282,7 @@
               <li><a href="service-details.html">خدمات سياحية | Tourism</a></li>
               <li><a href="service-details.html">المقاولات | Contracting</a></li>
               <li><a href="service-details.html">خدمات تجارية | Commercial</a></li>
+              <li><a href="service-details.html">خدمات الكاترينغ (الإطعام للشركات) | Catering (Corporate Feeding)</a></li>
             </ul>
           </div>
         </div>
@@ -352,10 +337,7 @@
     "partials/preloader.html": `<!-- Preloader Start !-->
 <div id="preloader">
   <div class="preloader-image">
-    <div class="dara-logo-text" style="font-size: 32px; text-align: center">
-      <span style="color: #4b70a9">DARA</span>
-      <span class="arabic" style="font-size: 20px">دارا</span>
-    </div>
+    <img src="images/logo/dara-logo-white-trim.png" alt="Dara International Group logo" class="dara-brand-logo dara-brand-logo-preloader" />
   </div>
   <div class="loader">
     <div class="row">
@@ -16016,3 +15998,13 @@ var _typeof =
     }, 800); // 800ms delay for better UX - shows preloader briefly but not too long
   });
 })(jQuery);
+
+
+
+
+
+
+
+
+
+

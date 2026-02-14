@@ -1,4 +1,4 @@
-html,
+﻿html,
 body {
   margin: 0;
   padding: 0;
@@ -583,7 +583,7 @@ input.te-theme-btn {
 }
 
 .fa-twitter::before {
-  content: "𝕏" !important;
+  content: "ً‌•ڈ" !important;
 }
 
 .elementor-column-gap-default
@@ -16948,3 +16948,131 @@ grid spacing fix for projects */ .portfolio-column-in-three {
     padding: 16px;
   }
 }
+
+.dara-brand-logo {
+  max-width: 100%;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.te-header-menu-area .dara-brand-logo {
+  max-height: 74px;
+  max-width: 240px;
+  margin: 20px auto 0;
+  margin-inline-end: 10px;
+}
+
+.te-header-menu-area .te-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.te-header-menu-area .te-logo {
+  justify-content: center;
+}
+
+.te-header-menu-area.te-sticky_menu .te-logo {
+  height: 100px;
+}
+
+.dara-brand-logo-sidebar {
+  max-height: 64px;
+  max-width: 220px;
+}
+
+.dara-brand-logo-footer {
+  max-height: 140px;
+  max-width: 320px;
+}
+
+.dara-brand-logo-preloader {
+  max-height: 132px;
+  max-width: 280px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.te-footer-widget .te-footer-widget-info .te-footer-logo {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.te-footer-widget .te-footer-widget-info .te-footer-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preloader-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1199px) {
+  .te-header-menu-area .dara-brand-logo {
+  max-height: 74px;
+  max-width: 240px;
+  margin: 20px auto 0;
+  margin-inline-end: 10px;
+}
+
+  .dara-brand-logo-sidebar {
+    max-height: 56px;
+    max-width: 200px;
+  }
+
+  .dara-brand-logo-footer {
+    max-height: 110px;
+    max-width: 260px;
+  }
+
+  .dara-brand-logo-preloader {
+    max-height: 112px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .te-header-menu-area .dara-brand-logo {
+  max-height: 74px;
+  max-width: 240px;
+  margin: 20px auto 0;
+  margin-inline-end: 10px;
+}
+
+  .dara-brand-logo-sidebar {
+    max-height: 50px;
+    max-width: 180px;
+  }
+
+  .dara-brand-logo-footer {
+    max-height: 88px;
+    max-width: 210px;
+  }
+
+  .dara-brand-logo-preloader {
+    max-height: 94px;
+    max-width: 200px;
+  }
+}
+
+
+
+
