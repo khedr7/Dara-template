@@ -17076,3 +17076,19 @@ grid spacing fix for projects */ .portfolio-column-in-three {
 
 
 
+
+/* Top header contact links/icons must stay white */
+.header-top .te-header-contact-info a,
+.header-top .te-header-contact-info span.te-contact-info-item,
+.header-top .te-header-contact-info i {
+  color: #fff !important;
+}
+
+.header-top .te-header-contact-info a:hover,
+.header-top .te-header-contact-info a:focus,
+.header-top .te-header-contact-info span.te-contact-info-item:hover,
+.header-top .te-header-contact-info span.te-contact-info-item:focus,
+.header-top .te-header-contact-info a:hover i,
+.header-top .te-header-contact-info a:focus i {
+  color: #fff !important;
+}
